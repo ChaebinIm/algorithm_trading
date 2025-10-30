@@ -15,4 +15,4 @@ algorithm trading by Chap. It starts with crypto currency. but, it will be bigge
 - 혼자서 작업하더라도, PR(Pull Request)를 써두면 변경 이력, 리뷰 메모, 백업이 훨씬 깔끔할 수 있음.
 
 ### 각 PC에서의 루틴(가장 중요!!)
-- 
+<img width="794" height="1489" alt="image" src="https://github.com/user-attachments/assets/c2ce76a6-134b-4139-817a-69c4de3b9263" />
