@@ -19,15 +19,19 @@ algorithm trading by Chap. It starts with crypto currency. but, it will be bigge
 <img width="709" height="353" alt="image" src="https://github.com/user-attachments/assets/5383f7b8-f260-42f8-becf-40c00ddf42dc" />
 
 - 새 작업을 시작할 때
-<img width="696" height="177" alt="image" src="https://github.com/user-attachments/assets/c1b748a1-7bcf-4b85-92f4-452dfcfab305" />
+<img width="699" height="145" alt="image" src="https://github.com/user-attachments/assets/1a04f57d-0d39-4a75-a47a-0ba93100423a" />
 
 - 로컬 작업 중 사소한 커밋. 커밋은 자주해줄수록 좋음. (버전관리 가능)
-<img width="694" height="137" alt="image" src="https://github.com/user-attachments/assets/7870a439-5429-478e-b4a0-da75f96c0db2" />
+<img width="709" height="569" alt="image" src="https://github.com/user-attachments/assets/485b7a8e-b6f6-4d7a-b01d-bbc8631a1351" />
+
+<img width="708" height="199" alt="image" src="https://github.com/user-attachments/assets/9db65936-2614-45aa-9f68-7bc6f5d91f56" />
+
 
 - 다른 컴퓨터에서 이어서 작업하고 싶을 때
 <img width="695" height="197" alt="image" src="https://github.com/user-attachments/assets/2e6bc681-5da2-4059-9672-a46585690848" />
 
 - 작업 끝났을 때 (pull Request)
-<img width="700" height="271" alt="image" src="https://github.com/user-attachments/assets/74357e2d-fb70-49bd-9b89-869cb5c6df97" />
+<img width="677" height="163" alt="image" src="https://github.com/user-attachments/assets/00f9261c-f7da-445f-81a4-f7c90a3e1b6b" />
+
 
 
