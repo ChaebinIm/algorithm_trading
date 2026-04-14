@@ -57,20 +57,16 @@ def adx(df: pd.DataFrame, period: int = 14) -> pd.Series:
     high = df["high"]
     low = df["low"]
 
-    # +DM, -DM 계산
     up_move = high.diff()
     down_move = -low.diff()
     plus_dm = np.where((up_move > down_move) & (up_move > 0), up_move, 0.0)
     minus_dm = np.where((down_move > up_move) & (down_move > 0), down_move, 0.0)
 
-    # ATR 계산
     atr_val = atr(df, period)
 
-    # Smoothed +DI, -DI
     plus_di = 100.0 * pd.Series(plus_dm, index=df.index).ewm(span=period, adjust=False).mean() / (atr_val + 1e-12)
     minus_di = 100.0 * pd.Series(minus_dm, index=df.index).ewm(span=period, adjust=False).mean() / (atr_val + 1e-12)
 
-    # DX → ADX
     dx = 100.0 * (plus_di - minus_di).abs() / (plus_di + minus_di + 1e-12)
     adx_val = dx.ewm(span=period, adjust=False).mean()
     return adx_val
@@ -83,10 +79,6 @@ def bollinger_bands(
 
     Returns:
         (upper, middle, lower, bandwidth)
-        - upper: 상단 밴드 (middle + num_std * std)
-        - middle: 중심선 (SMA)
-        - lower: 하단 밴드 (middle - num_std * std)
-        - bandwidth: 밴드폭 비율 ((upper - lower) / middle). 스퀴즈 감지에 사용.
     """
     middle = series.rolling(period).mean()
     std = series.rolling(period).std(ddof=1)
@@ -103,8 +95,6 @@ def donchian_channel(
 
     Returns:
         (upper, lower)
-        - upper: N기간 최고가
-        - lower: N기간 최저가
     """
     upper = df["high"].rolling(period).max()
     lower = df["low"].rolling(period).min()
@@ -114,6 +104,202 @@ def donchian_channel(
 def momentum(series: pd.Series, period: int = 20) -> pd.Series:
     """단순 모멘텀 — N기간 수익률.
     momentum[t] = close[t] / close[t - period] - 1
-    양수: 상승 모멘텀, 음수: 하락 모멘텀.
     """
     return series / series.shift(period) - 1.0
+
+
+# =============================
+# 신규 지표
+# =============================
+
+def macd(
+    series: pd.Series,
+    fast: int = 12,
+    slow: int = 26,
+    signal: int = 9,
+) -> tuple[pd.Series, pd.Series, pd.Series]:
+    """MACD (Moving Average Convergence Divergence).
+
+    Returns:
+        (macd_line, signal_line, histogram)
+        - macd_line > 0: 상승 모멘텀 우세
+        - histogram > 0: 모멘텀 강화 중
+        - signal cross (histogram이 음→양): 매수 신호
+    """
+    ema_fast = series.ewm(span=fast, adjust=False).mean()
+    ema_slow = series.ewm(span=slow, adjust=False).mean()
+    macd_line = ema_fast - ema_slow
+    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
+    histogram = macd_line - signal_line
+    return macd_line, signal_line, histogram
+
+
+def stochastic(
+    df: pd.DataFrame,
+    k_period: int = 14,
+    d_period: int = 3,
+) -> tuple[pd.Series, pd.Series]:
+    """스토캐스틱 %K, %D.
+
+    Returns:
+        (k, d)
+        - k < 20: 과매도, k > 80: 과매수
+        - k가 d를 상향 돌파: 매수 신호
+    """
+    low_min = df["low"].rolling(k_period).min()
+    high_max = df["high"].rolling(k_period).max()
+    k = 100.0 * (df["close"] - low_min) / (high_max - low_min + 1e-12)
+    d = k.rolling(d_period).mean()
+    return k, d
+
+
+def supertrend(
+    df: pd.DataFrame,
+    period: int = 10,
+    multiplier: float = 3.0,
+) -> tuple[pd.Series, pd.Series]:
+    """SuperTrend 지표 — ATR 기반 추세 추종 지표.
+
+    Returns:
+        (supertrend_line, direction)
+        - direction = +1: 상승 추세 (종가 > SuperTrend)
+        - direction = -1: 하락 추세 (종가 < SuperTrend)
+        - 방향 전환 시점이 진입/청산 신호
+
+    크립토 최적 파라미터: period=10, multiplier=3.0 (4h 기준)
+    """
+    hl2 = (df["high"] + df["low"]) / 2.0
+    atr_val = atr(df, period)
+
+    raw_upper = hl2 + multiplier * atr_val
+    raw_lower = hl2 - multiplier * atr_val
+
+    n = len(df)
+    close = df["close"].values
+    upper = raw_upper.values.copy()
+    lower = raw_lower.values.copy()
+    st = np.zeros(n)
+    direction = np.ones(n, dtype=int)
+
+    # 초기값
+    st[0] = upper[0]
+    direction[0] = -1  # 첫 바는 일단 하락으로 시작
+
+    for i in range(1, n):
+        # 밴드 조정 (이전 종가가 밴드 안에 있으면 밴드를 유지)
+        if close[i - 1] > upper[i - 1]:
+            upper[i] = upper[i]
+        else:
+            upper[i] = min(upper[i], upper[i - 1])
+
+        if close[i - 1] < lower[i - 1]:
+            lower[i] = lower[i]
+        else:
+            lower[i] = max(lower[i], lower[i - 1])
+
+        # 방향 결정
+        if direction[i - 1] == -1:
+            if close[i] > upper[i]:
+                direction[i] = 1
+            else:
+                direction[i] = -1
+        else:
+            if close[i] < lower[i]:
+                direction[i] = -1
+            else:
+                direction[i] = 1
+
+        # SuperTrend 값
+        st[i] = lower[i] if direction[i] == 1 else upper[i]
+
+    st_series = pd.Series(st, index=df.index, name="supertrend")
+    dir_series = pd.Series(direction, index=df.index, name="st_direction")
+    return st_series, dir_series
+
+
+def cmf(df: pd.DataFrame, period: int = 20) -> pd.Series:
+    """Chaikin Money Flow (CMF) — 자금 유입/유출 강도.
+
+    Returns:
+        cmf_series: -1 ~ +1
+        - > 0: 매수 압력 (자금 유입)
+        - < 0: 매도 압력 (자금 유출)
+        - |CMF| > 0.05: 의미 있는 신호
+    """
+    high = df["high"]
+    low = df["low"]
+    close = df["close"]
+    volume = df["volume"]
+
+    # Money Flow Multiplier
+    mfm = ((close - low) - (high - close)) / (high - low + 1e-12)
+    # Money Flow Volume
+    mfv = mfm * volume
+    return mfv.rolling(period).sum() / (volume.rolling(period).sum() + 1e-12)
+
+
+def obv(df: pd.DataFrame) -> pd.Series:
+    """On-Balance Volume (OBV) — 누적 거래량 지표.
+
+    Returns:
+        obv_series: 가격과 같이 상승하면 상승 추세 확인
+    """
+    delta = df["close"].diff()
+    direction = np.sign(delta).fillna(0)
+    return (direction * df["volume"]).cumsum()
+
+
+def keltner_channel(
+    df: pd.DataFrame,
+    ema_period: int = 20,
+    atr_period: int = 10,
+    multiplier: float = 2.0,
+) -> tuple[pd.Series, pd.Series, pd.Series]:
+    """켈트너 채널 (Keltner Channel).
+
+    Returns:
+        (upper, middle, lower)
+        - 볼린저 밴드보다 ATR 기반으로 더 안정적
+        - BB가 KC 안에 있으면 스퀴즈 상태 (폭발 임박)
+    """
+    middle = ema(df["close"], ema_period)
+    atr_val = atr(df, atr_period)
+    upper = middle + multiplier * atr_val
+    lower = middle - multiplier * atr_val
+    return upper, middle, lower
+
+
+def stoch_rsi(
+    series: pd.Series,
+    rsi_period: int = 14,
+    stoch_period: int = 14,
+    k_period: int = 3,
+    d_period: int = 3,
+) -> tuple[pd.Series, pd.Series]:
+    """Stochastic RSI — RSI에 스토캐스틱을 적용한 지표.
+
+    Returns:
+        (k, d)
+        - k < 20: 과매도 구역 (반등 가능성)
+        - k > 80: 과매수 구역 (조정 가능성)
+    """
+    rsi_val = rsi(series, rsi_period)
+    low_min = rsi_val.rolling(stoch_period).min()
+    high_max = rsi_val.rolling(stoch_period).max()
+    k = 100.0 * (rsi_val - low_min) / (high_max - low_min + 1e-12)
+    d = k.rolling(d_period).mean()
+    k_smooth = k.rolling(k_period).mean()
+    return k_smooth, d
+
+
+def williams_r(df: pd.DataFrame, period: int = 14) -> pd.Series:
+    """Williams %R — 과매수/과매도 오실레이터.
+
+    Returns:
+        w_r: -100 ~ 0
+        - > -20: 과매수
+        - < -80: 과매도
+    """
+    high_max = df["high"].rolling(period).max()
+    low_min = df["low"].rolling(period).min()
+    return -100.0 * (high_max - df["close"]) / (high_max - low_min + 1e-12)

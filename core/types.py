@@ -11,14 +11,7 @@ import pandas as pd
 
 @dataclass
 class Fill:
-    """단일 체결 레코드.
-    - ts: 체결 시각 (다음 바 시가 기준 체결 가정)
-    - side: 'buy' 또는 'sell'
-    - price: 체결 단가 (슬리피지 적용 후, USDT)
-    - qty: 체결 수량
-    - fee: 수수료 금액 (USDT)
-    - notional: 체결 금액 (단가*수량, USDT)
-    """
+    """단일 체결 레코드."""
     ts: pd.Timestamp
     side: str
     price: float
@@ -42,10 +35,19 @@ class TradeLog:
 @dataclass
 class BacktestReport:
     """백테스트 결과 컨테이너.
-    - equity: 바별 자본곡선
-    - returns: 바별 수익률(자본곡선 기준)
-    - trades: 체결 로그(데이터프레임)
-    - metrics: 성과 요약치(dict)
+
+    metrics에 포함되는 지표:
+    - cum_return: 누적 수익률
+    - ann_return: 연환산 수익률
+    - ann_vol: 연환산 변동성
+    - sharpe: 샤프 비율
+    - mdd: 최대 낙폭 (음수)
+    - calmar: Calmar 비율 = 연수익률 / |MDD|
+    - win_rate: 승률 (익절 거래 / 전체 거래)
+    - profit_factor: Profit Factor = 총 이익 / 총 손실
+    - avg_win: 평균 이기는 거래 수익률
+    - avg_loss: 평균 지는 거래 수익률
+    - total_trades: 총 거래 수 (라운드트립)
     """
     equity: pd.Series
     returns: pd.Series
