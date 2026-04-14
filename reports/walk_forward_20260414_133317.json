@@ -1,0 +1,2242 @@
+[
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.6203210218891138,
+        "ann_return": 0.08378067672000558,
+        "sharpe": 1.0604639793951844,
+        "calmar": 0.5679127160885725,
+        "mdd": -0.14752386123076544,
+        "win_rate": 0.42168674698795183,
+        "profit_factor": 2.17908956732717,
+        "total_roundtrips": 83
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.15466916232992234,
+        "ann_return": 0.05853592300637268,
+        "sharpe": 1.0934624096318786,
+        "calmar": 1.396553476525988,
+        "mdd": -0.04191455894019025,
+        "win_rate": 0.5,
+        "profit_factor": 1.9327285607352298,
+        "total_roundtrips": 42
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.5925944293614418,
+        "ann_return": 0.08071909769648017,
+        "sharpe": 0.906306396910007,
+        "calmar": 0.5238388286945912,
+        "mdd": -0.15409147484753793,
+        "win_rate": 0.4271356783919598,
+        "profit_factor": 1.577778238253147,
+        "total_roundtrips": 199
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.09608327551340379,
+        "ann_return": 0.036754662332910346,
+        "sharpe": 0.655031319051921,
+        "calmar": 0.5354772333048866,
+        "mdd": -0.06863907566252725,
+        "win_rate": 0.3595505617977528,
+        "profit_factor": 1.3298611962440987,
+        "total_roundtrips": 89
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.8901230881202649,
+        "ann_return": 0.10956782889089489,
+        "sharpe": 1.2216311017173223,
+        "calmar": 0.757192894965883,
+        "mdd": -0.14470266377113128,
+        "win_rate": 0.37962962962962965,
+        "profit_factor": 2.479330306983787,
+        "total_roundtrips": 108
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.1291496556980276,
+        "ann_return": 0.048826145842350656,
+        "sharpe": 0.8632855249633898,
+        "calmar": 0.8217830350345874,
+        "mdd": -0.05941488660626082,
+        "win_rate": 0.390625,
+        "profit_factor": 1.724873620965634,
+        "total_roundtrips": 64
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 1.077217539009537,
+        "ann_return": 0.12805026406016368,
+        "sharpe": 1.2269238274415601,
+        "calmar": 0.8788243896347342,
+        "mdd": -0.14570631581186133,
+        "win_rate": 0.4491525423728814,
+        "profit_factor": 1.7591422975480195,
+        "total_roundtrips": 236
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.1753337024106334,
+        "ann_return": 0.0664935240718174,
+        "sharpe": 1.0133973187035616,
+        "calmar": 0.8616345065363725,
+        "mdd": -0.0771713801693582,
+        "win_rate": 0.43333333333333335,
+        "profit_factor": 1.5140737991671822,
+        "total_roundtrips": 120
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.3564206439667057,
+        "ann_return": 0.05228247647196768,
+        "sharpe": 0.987568093162595,
+        "calmar": 0.5896941864880433,
+        "mdd": -0.0886603220268275,
+        "win_rate": 0.4,
+        "profit_factor": 1.734507045748991,
+        "total_roundtrips": 155
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.05784194959959099,
+        "ann_return": 0.023060051732738673,
+        "sharpe": 0.5645976292932467,
+        "calmar": 0.4476761675159393,
+        "mdd": -0.05151056367428797,
+        "win_rate": 0.34375,
+        "profit_factor": 1.3615759605155924,
+        "total_roundtrips": 64
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.6605193373986855,
+        "ann_return": 0.08910025940763705,
+        "sharpe": 0.9793002439125696,
+        "calmar": 0.6062373215634244,
+        "mdd": -0.14697257367337646,
+        "win_rate": 0.3815789473684211,
+        "profit_factor": 1.6986974353820103,
+        "total_roundtrips": 152
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.08004220110004012,
+        "ann_return": 0.032134566099065266,
+        "sharpe": 0.5476560707974114,
+        "calmar": 0.35298553167769176,
+        "mdd": -0.09103649644216605,
+        "win_rate": 0.38461538461538464,
+        "profit_factor": 1.3154949003591336,
+        "total_roundtrips": 65
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_4h",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.9917255108911784,
+        "ann_return": 0.11970964415824203,
+        "sharpe": 1.2546521169631275,
+        "calmar": 1.0376269589724205,
+        "mdd": -0.11536867187390243,
+        "win_rate": 0.4271356783919598,
+        "profit_factor": 1.853571397159559,
+        "total_roundtrips": 199
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.09320093429690934,
+        "ann_return": 0.03718415511362275,
+        "sharpe": 0.5908022475986964,
+        "calmar": 0.39556879053739097,
+        "mdd": -0.09400174129690941,
+        "win_rate": 0.4065934065934066,
+        "profit_factor": 1.3065208506104133,
+        "total_roundtrips": 91
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.4678986439156856,
+        "ann_return": 0.07246123445899355,
+        "sharpe": 0.9514416736627153,
+        "calmar": 0.6259283093525109,
+        "mdd": -0.11576602843435035,
+        "win_rate": 0.625,
+        "profit_factor": 11.56104349045295,
+        "total_roundtrips": 8
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": -0.03415518126930095,
+        "ann_return": -0.015389326543925212,
+        "sharpe": -0.2764673092335423,
+        "calmar": -0.1332276546968664,
+        "mdd": -0.11551150231389573,
+        "win_rate": 0.18181818181818182,
+        "profit_factor": 0.7489579106456458,
+        "total_roundtrips": 11
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.8279730587339349,
+        "ann_return": 0.10633195342218041,
+        "sharpe": 0.9712886999698134,
+        "calmar": 0.5996414199598588,
+        "mdd": -0.1773258982488215,
+        "win_rate": 0.5,
+        "profit_factor": 3.3001122073937554,
+        "total_roundtrips": 32
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.1541215858509455,
+        "ann_return": 0.058842887303550195,
+        "sharpe": 0.8275921547855154,
+        "calmar": 0.6721747561471945,
+        "mdd": -0.08754105500801113,
+        "win_rate": 0.29411764705882354,
+        "profit_factor": 2.14381376626445,
+        "total_roundtrips": 17
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.5011436291066615,
+        "ann_return": 0.07523065836790391,
+        "sharpe": 0.7237409489211304,
+        "calmar": 0.4698221636921381,
+        "mdd": -0.16012581819518146,
+        "win_rate": 0.5,
+        "profit_factor": 4.170129253836693,
+        "total_roundtrips": 18
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.07235470029122282,
+        "ann_return": 0.03163339690307326,
+        "sharpe": 0.5105580766086113,
+        "calmar": 0.4120149936677807,
+        "mdd": -0.0767772954597088,
+        "win_rate": 0.2727272727272727,
+        "profit_factor": 1.6991846853594506,
+        "total_roundtrips": 11
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.24105304115551984,
+        "ann_return": 0.04530840409192818,
+        "sharpe": 0.42137719961461056,
+        "calmar": 0.21308138913922753,
+        "mdd": -0.2126342627797989,
+        "win_rate": 0.3488372093023256,
+        "profit_factor": 1.539938124319776,
+        "total_roundtrips": 43
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": -0.0022786024934785543,
+        "ann_return": 0.0009170028059373023,
+        "sharpe": 0.013934846715462147,
+        "calmar": 0.011032757524464325,
+        "mdd": -0.0831163744778115,
+        "win_rate": 0.37037037037037035,
+        "profit_factor": 0.9869488550445462,
+        "total_roundtrips": 27
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.45341263920083885,
+        "ann_return": 0.07016592146401958,
+        "sharpe": 1.011971697079977,
+        "calmar": 0.6754008007978565,
+        "mdd": -0.10388782687325304,
+        "win_rate": 0.4,
+        "profit_factor": 3.189966470227127,
+        "total_roundtrips": 25
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": -0.05241727355262682,
+        "ann_return": -0.02561361535211643,
+        "sharpe": -0.7248571959513219,
+        "calmar": -0.28584000702034645,
+        "mdd": -0.08960822391110346,
+        "win_rate": 0.07692307692307693,
+        "profit_factor": 0.44545027857739194,
+        "total_roundtrips": 13
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.5671185132883085,
+        "ann_return": 0.08564551675266668,
+        "sharpe": 0.9305998306933716,
+        "calmar": 0.5082746518854313,
+        "mdd": -0.1685024355128839,
+        "win_rate": 0.47368421052631576,
+        "profit_factor": 2.983600769585803,
+        "total_roundtrips": 19
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": -0.03830602510785919,
+        "ann_return": -0.01744796229703889,
+        "sharpe": -0.30943958900502105,
+        "calmar": -0.13745434647763094,
+        "mdd": -0.12693641739252592,
+        "win_rate": 0.15384615384615385,
+        "profit_factor": 0.7186953460111994,
+        "total_roundtrips": 13
+      }
+    }
+  },
+  {
+    "data": "BTCUSDT_1d",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2214,
+        "period": "2017-08-17 ~ 2023-09-08",
+        "cum_return": 0.5936103248906539,
+        "ann_return": 0.08934188552239523,
+        "sharpe": 0.9033375054032126,
+        "calmar": 0.47481350777666376,
+        "mdd": -0.18816205533045582,
+        "win_rate": 0.4,
+        "profit_factor": 2.615641706944432,
+        "total_roundtrips": 25
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 949,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": -0.03044647290732605,
+        "ann_return": -0.013612928041029187,
+        "sharpe": -0.2520313657848095,
+        "calmar": -0.12818236790522555,
+        "mdd": -0.10619969238644444,
+        "win_rate": 0.2222222222222222,
+        "profit_factor": 0.7547997078905185,
+        "total_roundtrips": 18
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.8577122267783004,
+        "ann_return": 0.10892429325449877,
+        "sharpe": 1.0743741317439175,
+        "calmar": 0.9341929276347839,
+        "mdd": -0.11659721459178907,
+        "win_rate": 0.3707865168539326,
+        "profit_factor": 2.1989869121721743,
+        "total_roundtrips": 89
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.15698038018115956,
+        "ann_return": 0.059854703104229814,
+        "sharpe": 0.927094499325234,
+        "calmar": 0.8627951260251632,
+        "mdd": -0.06937301950129626,
+        "win_rate": 0.4,
+        "profit_factor": 1.9786028726667961,
+        "total_roundtrips": 35
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.8725482732144498,
+        "ann_return": 0.11079417121338431,
+        "sharpe": 0.9539686433125175,
+        "calmar": 0.5939186040366309,
+        "mdd": -0.18654773644025635,
+        "win_rate": 0.3979591836734694,
+        "profit_factor": 1.6442579864036568,
+        "total_roundtrips": 196
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.1549960248718376,
+        "ann_return": 0.057742594828575924,
+        "sharpe": 0.8328873661329489,
+        "calmar": 0.54460904322457,
+        "mdd": -0.10602577306859207,
+        "win_rate": 0.358695652173913,
+        "profit_factor": 1.457384886581889,
+        "total_roundtrips": 92
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.9745164461235611,
+        "ann_return": 0.11968462506965938,
+        "sharpe": 1.0356264576858494,
+        "calmar": 1.0154015811050143,
+        "mdd": -0.11786925222077826,
+        "win_rate": 0.3504273504273504,
+        "profit_factor": 1.945164637296669,
+        "total_roundtrips": 117
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.24951569005712848,
+        "ann_return": 0.08951395925648903,
+        "sharpe": 1.178044477053052,
+        "calmar": 1.359986617831486,
+        "mdd": -0.06581973534258745,
+        "win_rate": 0.39285714285714285,
+        "profit_factor": 1.9110389952197464,
+        "total_roundtrips": 56
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 1.1333285865204084,
+        "ann_return": 0.1359089768807916,
+        "sharpe": 1.004972336112793,
+        "calmar": 1.051659047377401,
+        "mdd": -0.1292329269820538,
+        "win_rate": 0.46502057613168724,
+        "profit_factor": 1.5790758881344626,
+        "total_roundtrips": 243
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.1598171207020027,
+        "ann_return": 0.06217158566964465,
+        "sharpe": 0.801206889341116,
+        "calmar": 0.7368250724649719,
+        "mdd": -0.0843776738770835,
+        "win_rate": 0.41935483870967744,
+        "profit_factor": 1.3847861671380157,
+        "total_roundtrips": 93
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 0.6338075903164806,
+        "ann_return": 0.08524800165435785,
+        "sharpe": 1.111962298130135,
+        "calmar": 0.9303912927707423,
+        "mdd": -0.0916259667473408,
+        "win_rate": 0.4444444444444444,
+        "profit_factor": 1.9364588890620436,
+        "total_roundtrips": 144
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.05265026024392405,
+        "ann_return": 0.021268200499016694,
+        "sharpe": 0.5715229925056583,
+        "calmar": 0.4589946529007331,
+        "mdd": -0.04633648859338102,
+        "win_rate": 0.36,
+        "profit_factor": 1.419490493732326,
+        "total_roundtrips": 50
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 1.0970903824590437,
+        "ann_return": 0.13096221292223656,
+        "sharpe": 1.120721744441318,
+        "calmar": 0.9046739608453688,
+        "mdd": -0.14476178003283613,
+        "win_rate": 0.33540372670807456,
+        "profit_factor": 1.7572407117563946,
+        "total_roundtrips": 161
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.2174836820295729,
+        "ann_return": 0.08135730304607873,
+        "sharpe": 0.9993775113692188,
+        "calmar": 1.0707011808395606,
+        "mdd": -0.07598506894445933,
+        "win_rate": 0.3230769230769231,
+        "profit_factor": 1.6489478641075932,
+        "total_roundtrips": 65
+      }
+    }
+  },
+  {
+    "data": "ETHUSDT_4h",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 13271,
+        "period": "2017-08-17 ~ 2023-09-09",
+        "cum_return": 1.218980441222378,
+        "ann_return": 0.1410823405015364,
+        "sharpe": 1.1699450174349577,
+        "calmar": 1.2399941860026438,
+        "mdd": -0.11377661451389709,
+        "win_rate": 0.38095238095238093,
+        "profit_factor": 1.704644248369403,
+        "total_roundtrips": 210
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5688,
+        "period": "2023-09-09 ~ 2026-04-14",
+        "cum_return": 0.2657537573779649,
+        "ann_return": 0.09688911470279614,
+        "sharpe": 1.1573645076132608,
+        "calmar": 1.1410581295855455,
+        "mdd": -0.08491163788197809,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 1.6569958004292518,
+        "total_roundtrips": 90
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 1.1996112488986634,
+        "ann_return": 0.21728340508551267,
+        "sharpe": 1.3042127423088015,
+        "calmar": 1.008488196927861,
+        "mdd": -0.21545458414526875,
+        "win_rate": 0.38095238095238093,
+        "profit_factor": 2.4360558933271097,
+        "total_roundtrips": 63
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": 0.10003162398495902,
+        "ann_return": 0.06125266565593579,
+        "sharpe": 0.9055558764696459,
+        "calmar": 1.0194695305838681,
+        "mdd": -0.060082880181652754,
+        "win_rate": 0.4117647058823529,
+        "profit_factor": 2.002136709521917,
+        "total_roundtrips": 17
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 0.8158959901493508,
+        "ann_return": 0.16587446430143882,
+        "sharpe": 0.9909819379343638,
+        "calmar": 0.9160980443687773,
+        "mdd": -0.18106627922649465,
+        "win_rate": 0.36,
+        "profit_factor": 1.5643388503876927,
+        "total_roundtrips": 150
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": -0.07803355711222193,
+        "ann_return": -0.04425490877053509,
+        "sharpe": -0.4629543019547512,
+        "calmar": -0.2476827658422709,
+        "mdd": -0.17867576946580843,
+        "win_rate": 0.32142857142857145,
+        "profit_factor": 0.7473942906530258,
+        "total_roundtrips": 56
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 0.9971279903997359,
+        "ann_return": 0.19176760234625426,
+        "sharpe": 1.1653442841391595,
+        "calmar": 0.8991496671328867,
+        "mdd": -0.21327662051729757,
+        "win_rate": 0.40476190476190477,
+        "profit_factor": 2.0097952248165516,
+        "total_roundtrips": 84
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": 0.03604502391521702,
+        "ann_return": 0.024134617672344108,
+        "sharpe": 0.32135092884163813,
+        "calmar": 0.320154990595155,
+        "mdd": -0.07538416823413774,
+        "win_rate": 0.26666666666666666,
+        "profit_factor": 1.2084810881584542,
+        "total_roundtrips": 30
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 1.4554742485759182,
+        "ann_return": 0.2531334914242836,
+        "sharpe": 1.2769310693625162,
+        "calmar": 1.1849593529460851,
+        "mdd": -0.21362208821235074,
+        "win_rate": 0.3695652173913043,
+        "profit_factor": 1.6957655197616728,
+        "total_roundtrips": 184
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": -0.0004383049940100969,
+        "ann_return": 0.0037685552520782778,
+        "sharpe": 0.04292682339649538,
+        "calmar": 0.031087739986921277,
+        "mdd": -0.12122319775038759,
+        "win_rate": 0.4142857142857143,
+        "profit_factor": 0.9986504978860486,
+        "total_roundtrips": 70
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 0.028679097081333316,
+        "ann_return": 0.012165091262148446,
+        "sharpe": 0.13429366474161678,
+        "calmar": 0.09172751365830586,
+        "mdd": -0.1326220539169185,
+        "win_rate": 0.34065934065934067,
+        "profit_factor": 1.0516868198654035,
+        "total_roundtrips": 91
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": 0.013171802753583872,
+        "ann_return": 0.008994266105754004,
+        "sharpe": 0.22768429584793676,
+        "calmar": 0.1859588506228369,
+        "mdd": -0.04836696976478028,
+        "win_rate": 0.38461538461538464,
+        "profit_factor": 1.2091545281946994,
+        "total_roundtrips": 26
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 0.3284158379721842,
+        "ann_return": 0.08598005821539977,
+        "sharpe": 0.5560526318402315,
+        "calmar": 0.2572598131300169,
+        "mdd": -0.33421488249192244,
+        "win_rate": 0.32710280373831774,
+        "profit_factor": 1.3261139023767723,
+        "total_roundtrips": 107
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": -0.0018003532567688607,
+        "ann_return": 0.00310805558149693,
+        "sharpe": 0.030474966325312474,
+        "calmar": 0.027083980721411747,
+        "mdd": -0.11475623223334797,
+        "win_rate": 0.3170731707317073,
+        "profit_factor": 1.0003300920012235,
+        "total_roundtrips": 41
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_4h",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 8704,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 0.351126235482653,
+        "ann_return": 0.09233407093547853,
+        "sharpe": 0.5495611926021347,
+        "calmar": 0.3569214357357303,
+        "mdd": -0.25869578481547706,
+        "win_rate": 0.33121019108280253,
+        "profit_factor": 1.279614470886077,
+        "total_roundtrips": 157
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3731,
+        "period": "2024-07-31 ~ 2026-04-14",
+        "cum_return": -0.045960125538625274,
+        "ann_return": -0.024871607736759043,
+        "sharpe": -0.24611021918894302,
+        "calmar": -0.14041003119365497,
+        "mdd": -0.17713554740483928,
+        "win_rate": 0.34375,
+        "profit_factor": 0.8791278242862636,
+        "total_roundtrips": 64
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 2.4454359220990525,
+        "ann_return": 0.391719396383201,
+        "sharpe": 1.5693537716685286,
+        "calmar": 1.8545518617237264,
+        "mdd": -0.21122051341139636,
+        "win_rate": 0.6,
+        "profit_factor": 15.48312809620994,
+        "total_roundtrips": 5
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": -0.018673775729026287,
+        "ann_return": -0.014564565545655498,
+        "sharpe": -0.2470327503382561,
+        "calmar": -0.20117038462828177,
+        "mdd": -0.07239915344580372,
+        "win_rate": 0.5,
+        "profit_factor": 0.5411143103600777,
+        "total_roundtrips": 2
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 3.51029475953991,
+        "ann_return": 0.4128216677802802,
+        "sharpe": 1.7203644253910735,
+        "calmar": 1.8692252478651965,
+        "mdd": -0.22085175034409898,
+        "win_rate": 0.6,
+        "profit_factor": 8.056649551695225,
+        "total_roundtrips": 20
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": -0.11467057687894322,
+        "ann_return": -0.0706152185935923,
+        "sharpe": -0.8796172116562248,
+        "calmar": -0.4051479807084869,
+        "mdd": -0.17429487978615,
+        "win_rate": 0.16666666666666666,
+        "profit_factor": 0.3448061631738135,
+        "total_roundtrips": 12
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 3.349547208997504,
+        "ann_return": 0.4353915349174983,
+        "sharpe": 1.5222680197876877,
+        "calmar": 1.759294471233937,
+        "mdd": -0.2474807611998936,
+        "win_rate": 0.7,
+        "profit_factor": 18.020895692081066,
+        "total_roundtrips": 10
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": -0.028434793760708676,
+        "ann_return": -0.01744890762657237,
+        "sharpe": -0.2526614272237914,
+        "calmar": -0.13731823682796962,
+        "mdd": -0.12706912082110988,
+        "win_rate": 0.4,
+        "profit_factor": 0.653550511796368,
+        "total_roundtrips": 5
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 1.8392376081652508,
+        "ann_return": 0.3486962118530892,
+        "sharpe": 1.2477922100195886,
+        "calmar": 0.975957269277514,
+        "mdd": -0.3572863513893878,
+        "win_rate": 0.48148148148148145,
+        "profit_factor": 4.152496281111569,
+        "total_roundtrips": 27
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": -0.059651755449411925,
+        "ann_return": -0.05406317393462145,
+        "sharpe": -0.9085644416140951,
+        "calmar": -0.5019644546859732,
+        "mdd": -0.10770319178863208,
+        "win_rate": 0.2857142857142857,
+        "profit_factor": 0.21865668456883275,
+        "total_roundtrips": 7
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 0.11409517778475631,
+        "ann_return": 0.03574423829472894,
+        "sharpe": 0.3879872528735874,
+        "calmar": 0.19279470851556707,
+        "mdd": -0.18540051524106016,
+        "win_rate": 0.375,
+        "profit_factor": 1.4928050541437483,
+        "total_roundtrips": 16
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": -0.06647469552374752,
+        "ann_return": -0.058517279208589935,
+        "sharpe": -1.330335139211919,
+        "calmar": -0.8694085680704997,
+        "mdd": -0.06730699622340897,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "total_roundtrips": 4
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 1.7757680226747765,
+        "ann_return": 0.3200824638175951,
+        "sharpe": 1.5072960800540882,
+        "calmar": 1.3040455275735423,
+        "mdd": -0.2454534424207362,
+        "win_rate": 0.4,
+        "profit_factor": 7.434733506035692,
+        "total_roundtrips": 10
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": -0.06681730531193752,
+        "ann_return": -0.055645676684455685,
+        "sharpe": -0.6105823140529806,
+        "calmar": -0.5161698033166059,
+        "mdd": -0.10780498263632021,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 0.4355872899936278,
+        "total_roundtrips": 6
+      }
+    }
+  },
+  {
+    "data": "SOLUSDT_1d",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1451,
+        "period": "2020-08-11 ~ 2024-07-31",
+        "cum_return": 1.2862060365912389,
+        "ann_return": 0.2615005749715438,
+        "sharpe": 1.2899965793135546,
+        "calmar": 0.9366408042294901,
+        "mdd": -0.27918981725948366,
+        "win_rate": 0.3181818181818182,
+        "profit_factor": 3.2676634977794934,
+        "total_roundtrips": 22
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 622,
+        "period": "2024-08-01 ~ 2026-04-14",
+        "cum_return": 0.003058299297753919,
+        "ann_return": 0.0062954411056082875,
+        "sharpe": 0.07355412086665095,
+        "calmar": 0.069904085661495,
+        "mdd": -0.09005827121498389,
+        "win_rate": 0.375,
+        "profit_factor": 1.0352368348726564,
+        "total_roundtrips": 8
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.3772374604465494,
+        "ann_return": 0.06771847901322987,
+        "sharpe": 0.456759953081749,
+        "calmar": 0.24539406760228222,
+        "mdd": -0.2759580933420849,
+        "win_rate": 0.34375,
+        "profit_factor": 1.5540795519593023,
+        "total_roundtrips": 64
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.2031928759959869,
+        "ann_return": 0.08728039777836206,
+        "sharpe": 0.7115828073035261,
+        "calmar": 0.6111228726243385,
+        "mdd": -0.14281972036645207,
+        "win_rate": 0.2857142857142857,
+        "profit_factor": 1.7831680933112581,
+        "total_roundtrips": 28
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.15640435629021754,
+        "ann_return": 0.034749236373663034,
+        "sharpe": 0.24350679197549152,
+        "calmar": 0.1518773374175381,
+        "mdd": -0.22879803507470808,
+        "win_rate": 0.3036649214659686,
+        "profit_factor": 1.13311058992187,
+        "total_roundtrips": 191
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.2202489730179853,
+        "ann_return": 0.08956006073307429,
+        "sharpe": 0.7457796697406198,
+        "calmar": 0.9407783307661933,
+        "mdd": -0.09519783545523797,
+        "win_rate": 0.3,
+        "profit_factor": 1.6124753107257646,
+        "total_roundtrips": 80
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.5577674723906245,
+        "ann_return": 0.091275190805932,
+        "sharpe": 0.5646027335042934,
+        "calmar": 0.4887415397089454,
+        "mdd": -0.18675554130266747,
+        "win_rate": 0.3627450980392157,
+        "profit_factor": 1.607855409895435,
+        "total_roundtrips": 102
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.30799365305007664,
+        "ann_return": 0.12126087977505548,
+        "sharpe": 0.9740471630188031,
+        "calmar": 0.9593773430371076,
+        "mdd": -0.1263953966123691,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 1.970670574389827,
+        "total_roundtrips": 45
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.5946762484776527,
+        "ann_return": 0.0962291549206696,
+        "sharpe": 0.5732973458065392,
+        "calmar": 0.46108002669543335,
+        "mdd": -0.20870380269968347,
+        "win_rate": 0.3852813852813853,
+        "profit_factor": 1.3746377087906447,
+        "total_roundtrips": 231
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.3364284779973563,
+        "ann_return": 0.13566290888590196,
+        "sharpe": 0.9875635734657259,
+        "calmar": 1.075732208134021,
+        "mdd": -0.12611215677937992,
+        "win_rate": 0.3132530120481928,
+        "profit_factor": 1.6412805857400854,
+        "total_roundtrips": 83
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.5545372541150504,
+        "ann_return": 0.08562931890866037,
+        "sharpe": 0.7503776752480673,
+        "calmar": 0.6756961428660527,
+        "mdd": -0.1267275532235197,
+        "win_rate": 0.3364485981308411,
+        "profit_factor": 1.7649042979693925,
+        "total_roundtrips": 107
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.032097754521385635,
+        "ann_return": 0.015900675371396132,
+        "sharpe": 0.20648814064032206,
+        "calmar": 0.12654236416267645,
+        "mdd": -0.12565495734557708,
+        "win_rate": 0.17391304347826086,
+        "profit_factor": 1.170536696194159,
+        "total_roundtrips": 46
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.4973918896993088,
+        "ann_return": 0.08525233760830842,
+        "sharpe": 0.5113478248155372,
+        "calmar": 0.33823271888534495,
+        "mdd": -0.2520523085079456,
+        "win_rate": 0.30597014925373134,
+        "profit_factor": 1.4085412163381044,
+        "total_roundtrips": 134
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.22632715856961716,
+        "ann_return": 0.09640874720815115,
+        "sharpe": 0.7126524063676066,
+        "calmar": 0.6421283934919253,
+        "mdd": -0.15013936182331633,
+        "win_rate": 0.3114754098360656,
+        "profit_factor": 1.606763878793776,
+        "total_roundtrips": 61
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_4h",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12183,
+        "period": "2018-05-04 ~ 2023-11-26",
+        "cum_return": 0.6758116511984318,
+        "ann_return": 0.10649909649904722,
+        "sharpe": 0.6257693680750589,
+        "calmar": 0.3977209567772611,
+        "mdd": -0.2677734091801782,
+        "win_rate": 0.31351351351351353,
+        "profit_factor": 1.4421970718027575,
+        "total_roundtrips": 185
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5222,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.39272984093315744,
+        "ann_return": 0.15252650645165472,
+        "sharpe": 1.110294998532151,
+        "calmar": 1.5273860359487406,
+        "mdd": -0.0998611371717727,
+        "win_rate": 0.33707865168539325,
+        "profit_factor": 1.782311769532015,
+        "total_roundtrips": 89
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": 0.3045623879274364,
+        "ann_return": 0.06594003801796725,
+        "sharpe": 0.40311959245525136,
+        "calmar": 0.2183351099755535,
+        "mdd": -0.3020129837346457,
+        "win_rate": 0.25,
+        "profit_factor": 2.9346595839086342,
+        "total_roundtrips": 8
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.5123423267558769,
+        "ann_return": 0.2501483456030133,
+        "sharpe": 1.1067892147149745,
+        "calmar": 1.2226539327761625,
+        "mdd": -0.2045945617937881,
+        "win_rate": 0.16666666666666666,
+        "profit_factor": 3.774474282918219,
+        "total_roundtrips": 6
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": 0.26642429954904046,
+        "ann_return": 0.05446934448922557,
+        "sharpe": 0.35228183210759956,
+        "calmar": 0.188663500304508,
+        "mdd": -0.2887116183104942,
+        "win_rate": 0.3,
+        "profit_factor": 1.5115399153088396,
+        "total_roundtrips": 30
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.6019105950514516,
+        "ann_return": 0.2176782728157543,
+        "sharpe": 1.2244124151201026,
+        "calmar": 1.4709831134259608,
+        "mdd": -0.1479814899487898,
+        "win_rate": 0.36363636363636365,
+        "profit_factor": 4.792662179703864,
+        "total_roundtrips": 11
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": 0.24281371857262601,
+        "ann_return": 0.05175283011166641,
+        "sharpe": 0.34613810477577556,
+        "calmar": 0.20480696212743943,
+        "mdd": -0.25269077561562014,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 1.7923017405569777,
+        "total_roundtrips": 18
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.3683658372800347,
+        "ann_return": 0.1628017934402127,
+        "sharpe": 0.9021065411318905,
+        "calmar": 1.015745620596643,
+        "mdd": -0.1602781150496796,
+        "win_rate": 0.2,
+        "profit_factor": 3.096089835097525,
+        "total_roundtrips": 10
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": 0.712399051740807,
+        "ann_return": 0.13040122958071587,
+        "sharpe": 0.611243515647262,
+        "calmar": 0.5031240394826809,
+        "mdd": -0.2591830629168368,
+        "win_rate": 0.475,
+        "profit_factor": 1.9349228037998014,
+        "total_roundtrips": 40
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": -0.10768676559187884,
+        "ann_return": -0.05860256320214669,
+        "sharpe": -0.569647731343607,
+        "calmar": -0.30856287459067017,
+        "mdd": -0.18992097892391768,
+        "win_rate": 0.2631578947368421,
+        "profit_factor": 0.4804472932342538,
+        "total_roundtrips": 19
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": 0.01902841500803909,
+        "ann_return": 0.008206627564689761,
+        "sharpe": 0.08569557566799788,
+        "calmar": 0.03569464731298185,
+        "mdd": -0.22991199472278812,
+        "win_rate": 0.2857142857142857,
+        "profit_factor": 1.0747229960995217,
+        "total_roundtrips": 14
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.5815863609466672,
+        "ann_return": 0.2657081250457375,
+        "sharpe": 1.4564540969807602,
+        "calmar": 2.1749791941968204,
+        "mdd": -0.1221658238168497,
+        "win_rate": 0.42857142857142855,
+        "profit_factor": 4.951396417458053,
+        "total_roundtrips": 7
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": -0.17581150458178996,
+        "ann_return": -0.03552368385475994,
+        "sharpe": -0.4597419886404342,
+        "calmar": -0.1445459835194723,
+        "mdd": -0.24576043546605963,
+        "win_rate": 0.16666666666666666,
+        "profit_factor": 0.37009179404289905,
+        "total_roundtrips": 18
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.5081265877714942,
+        "ann_return": 0.2418843208060345,
+        "sharpe": 1.2521297909507227,
+        "calmar": 1.5407727870803927,
+        "mdd": -0.15698896218360647,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 4.033470112748928,
+        "total_roundtrips": 9
+      }
+    }
+  },
+  {
+    "data": "XRPUSDT_1d",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 2032,
+        "period": "2018-05-04 ~ 2023-11-25",
+        "cum_return": 0.3920882811528117,
+        "ann_return": 0.0792310167354892,
+        "sharpe": 0.4786020979496884,
+        "calmar": 0.2558729425076007,
+        "mdd": -0.3096498440153741,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 1.778156037755084,
+        "total_roundtrips": 27
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 871,
+        "period": "2023-11-26 ~ 2026-04-14",
+        "cum_return": 0.5307501602230473,
+        "ann_return": 0.25081111121695543,
+        "sharpe": 1.270163548979579,
+        "calmar": 1.9132637245515232,
+        "mdd": -0.13109071582582443,
+        "win_rate": 0.3333333333333333,
+        "profit_factor": 3.2976067293165343,
+        "total_roundtrips": 12
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 1.0808946300945657,
+        "ann_return": 0.1383752217501597,
+        "sharpe": 0.833096269486365,
+        "calmar": 0.6772693580250735,
+        "mdd": -0.2043134243559851,
+        "win_rate": 0.38271604938271603,
+        "profit_factor": 2.1771211738430396,
+        "total_roundtrips": 81
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": 0.1323106470997235,
+        "ann_return": 0.053739613378819405,
+        "sharpe": 0.6971100334377474,
+        "calmar": 0.7518672889865967,
+        "mdd": -0.07147486553178872,
+        "win_rate": 0.391304347826087,
+        "profit_factor": 1.7017584594272497,
+        "total_roundtrips": 46
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 2.7790073063324847,
+        "ann_return": 0.23785721605753693,
+        "sharpe": 1.3111042746543726,
+        "calmar": 1.209247998454217,
+        "mdd": -0.196698457521022,
+        "win_rate": 0.4072164948453608,
+        "profit_factor": 2.253296324175625,
+        "total_roundtrips": 194
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": 0.04374254257508503,
+        "ann_return": 0.01910536772672633,
+        "sharpe": 0.2895276475062857,
+        "calmar": 0.1700415202352614,
+        "mdd": -0.11235707431998376,
+        "win_rate": 0.32,
+        "profit_factor": 1.132345787325988,
+        "total_roundtrips": 100
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 2.3518979692864437,
+        "ann_return": 0.22074622717593465,
+        "sharpe": 1.185556636519494,
+        "calmar": 1.4446803008826188,
+        "mdd": -0.15279936124250215,
+        "win_rate": 0.4132231404958678,
+        "profit_factor": 2.3600873000658305,
+        "total_roundtrips": 121
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": -0.00113913774614538,
+        "ann_return": 0.001860010009893972,
+        "sharpe": 0.026855432671152816,
+        "calmar": 0.014714536386648158,
+        "mdd": -0.12640629381752144,
+        "win_rate": 0.31746031746031744,
+        "profit_factor": 0.9945224273029777,
+        "total_roundtrips": 63
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 1.9913600172440602,
+        "ann_return": 0.20531166842475557,
+        "sharpe": 1.0032464477442824,
+        "calmar": 0.69952630632308,
+        "mdd": -0.29350099712937994,
+        "win_rate": 0.39080459770114945,
+        "profit_factor": 1.6882686241804854,
+        "total_roundtrips": 261
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": 0.02691534269015161,
+        "ann_return": 0.014455848554563729,
+        "sharpe": 0.16273176864751798,
+        "calmar": 0.09788619227382458,
+        "mdd": -0.14768016018058383,
+        "win_rate": 0.4180327868852459,
+        "profit_factor": 1.0568793930707276,
+        "total_roundtrips": 122
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 0.7884373989725133,
+        "ann_return": 0.10386653701040327,
+        "sharpe": 0.9600488946991839,
+        "calmar": 1.085999595073254,
+        "mdd": -0.09564141412254501,
+        "win_rate": 0.45,
+        "profit_factor": 2.796219395867389,
+        "total_roundtrips": 120
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": 0.051399692482213544,
+        "ann_return": 0.021686322451657983,
+        "sharpe": 0.45583602503594717,
+        "calmar": 0.4587475102989644,
+        "mdd": -0.047272894052474146,
+        "win_rate": 0.4426229508196721,
+        "profit_factor": 1.2970252869120857,
+        "total_roundtrips": 61
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 0.6916561139919621,
+        "ann_return": 0.09788561174675764,
+        "sharpe": 0.8071784045439157,
+        "calmar": 0.5426640488077763,
+        "mdd": -0.18037976158779634,
+        "win_rate": 0.36551724137931035,
+        "profit_factor": 1.5965213891224856,
+        "total_roundtrips": 145
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": 0.2464228562229449,
+        "ann_return": 0.09299793004748112,
+        "sharpe": 1.2124383647807664,
+        "calmar": 2.2668479422959487,
+        "mdd": -0.041025217576359574,
+        "win_rate": 0.47692307692307695,
+        "profit_factor": 2.079048802610399,
+        "total_roundtrips": 65
+      }
+    }
+  },
+  {
+    "data": "BNBUSDT_4h",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 12931,
+        "period": "2017-11-06 ~ 2023-10-03",
+        "cum_return": 1.0755708545116742,
+        "ann_return": 0.13533891742829185,
+        "sharpe": 0.8803804594700759,
+        "calmar": 0.58351655711734,
+        "mdd": -0.23193672189235393,
+        "win_rate": 0.3761904761904762,
+        "profit_factor": 1.578972931387729,
+        "total_roundtrips": 210
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 5543,
+        "period": "2023-10-03 ~ 2026-04-14",
+        "cum_return": 0.06908561502847888,
+        "ann_return": 0.0300640387834764,
+        "sharpe": 0.3885234613416926,
+        "calmar": 0.2739627236548376,
+        "mdd": -0.10973769855303295,
+        "win_rate": 0.37623762376237624,
+        "profit_factor": 1.1801695899244014,
+        "total_roundtrips": 101
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.449332406642885,
+        "ann_return": 0.09624272711942033,
+        "sharpe": 1.0557757893808561,
+        "calmar": 1.009088315844555,
+        "mdd": -0.09537592062778077,
+        "win_rate": 0.3939393939393939,
+        "profit_factor": 1.8572849626074102,
+        "total_roundtrips": 66
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.55071479010166,
+        "ann_return": 0.279534642054994,
+        "sharpe": 1.4257812381548685,
+        "calmar": 1.528497329193253,
+        "mdd": -0.18288199574480446,
+        "win_rate": 0.4166666666666667,
+        "profit_factor": 2.178030984956865,
+        "total_roundtrips": 24
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.6152885556225685,
+        "ann_return": 0.12109726001200247,
+        "sharpe": 1.2610099087565885,
+        "calmar": 1.1205730942623493,
+        "mdd": -0.10806725650556315,
+        "win_rate": 0.39097744360902253,
+        "profit_factor": 1.7036894293946614,
+        "total_roundtrips": 133
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.709968047996641,
+        "ann_return": 0.3220098094957708,
+        "sharpe": 1.7875663567446651,
+        "calmar": 2.93946909567289,
+        "mdd": -0.10954692803773747,
+        "win_rate": 0.4,
+        "profit_factor": 2.1465464044210263,
+        "total_roundtrips": 55
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.9149558886628042,
+        "ann_return": 0.1636188490447402,
+        "sharpe": 1.7005111862351305,
+        "calmar": 1.879561705391684,
+        "mdd": -0.08705159749398272,
+        "win_rate": 0.4533333333333333,
+        "profit_factor": 3.035342733286103,
+        "total_roundtrips": 75
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.911332469980001,
+        "ann_return": 0.39241953814516994,
+        "sharpe": 2.1978092585216524,
+        "calmar": 2.4137392250036407,
+        "mdd": -0.16257743756149312,
+        "win_rate": 0.4722222222222222,
+        "profit_factor": 3.162207477125602,
+        "total_roundtrips": 36
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.8143416092333471,
+        "ann_return": 0.15494940854662678,
+        "sharpe": 1.2415659916354689,
+        "calmar": 0.9250071364835164,
+        "mdd": -0.16751158173195668,
+        "win_rate": 0.47096774193548385,
+        "profit_factor": 1.792657281298916,
+        "total_roundtrips": 155
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.1075455418418414,
+        "ann_return": 0.08859967401098119,
+        "sharpe": 0.36438136643589686,
+        "calmar": 0.31904198319025745,
+        "mdd": -0.2777053763417294,
+        "win_rate": 0.38095238095238093,
+        "profit_factor": 1.1002150708387066,
+        "total_roundtrips": 84
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.3996480766186359,
+        "ann_return": 0.08575098281043525,
+        "sharpe": 1.2188601314823775,
+        "calmar": 0.6933188227408421,
+        "mdd": -0.12368189063546464,
+        "win_rate": 0.5180722891566265,
+        "profit_factor": 2.4699680042312147,
+        "total_roundtrips": 83
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.2060922170131576,
+        "ann_return": 0.12178607527757948,
+        "sharpe": 0.8077299438781553,
+        "calmar": 0.7276462180961969,
+        "mdd": -0.1673699007128645,
+        "win_rate": 0.3142857142857143,
+        "profit_factor": 1.4969511294779403,
+        "total_roundtrips": 35
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.4942442185304534,
+        "ann_return": 0.10534515815183304,
+        "sharpe": 0.9595308420428605,
+        "calmar": 0.5026239788352429,
+        "mdd": -0.2095903947827008,
+        "win_rate": 0.37373737373737376,
+        "profit_factor": 1.5848938254728298,
+        "total_roundtrips": 99
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.3747555889244345,
+        "ann_return": 0.21164381838150445,
+        "sharpe": 1.0691138159728069,
+        "calmar": 1.0093782292364912,
+        "mdd": -0.2096774155121075,
+        "win_rate": 0.37142857142857144,
+        "profit_factor": 1.6904100398422688,
+        "total_roundtrips": 35
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_4h",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 9000,
+        "period": "2020-01-01 ~ 2024-02-09",
+        "cum_return": 0.7056667289434853,
+        "ann_return": 0.13803422896779963,
+        "sharpe": 1.2549858485627847,
+        "calmar": 1.045469637279567,
+        "mdd": -0.13203083479873712,
+        "win_rate": 0.38848920863309355,
+        "profit_factor": 1.7335024871821332,
+        "total_roundtrips": 139
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 3858,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.34539473649841734,
+        "ann_return": 0.20136813717913138,
+        "sharpe": 0.9646406560622514,
+        "calmar": 1.0687123762733888,
+        "mdd": -0.1884212643632288,
+        "win_rate": 0.4074074074074074,
+        "profit_factor": 1.4695338030099199,
+        "total_roundtrips": 54
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "supertrend",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.6347200396901491,
+        "ann_return": 0.14404558480205557,
+        "sharpe": 1.309882473265009,
+        "calmar": 1.0890714805139443,
+        "mdd": -0.13226458260847107,
+        "win_rate": 0.7,
+        "profit_factor": 8.865541806933022,
+        "total_roundtrips": 10
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.39874376812798573,
+        "ann_return": 0.30651884477059554,
+        "sharpe": 1.2332613294891623,
+        "calmar": 1.265239070661631,
+        "mdd": -0.24226160247252126,
+        "win_rate": 0.6,
+        "profit_factor": 2.4797812305336735,
+        "total_roundtrips": 5
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "supertrend_ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.8024822787563737,
+        "ann_return": 0.15152180026942572,
+        "sharpe": 1.3520793756850615,
+        "calmar": 1.145326415181642,
+        "mdd": -0.13229573531162286,
+        "win_rate": 0.5789473684210527,
+        "profit_factor": 4.398889357961829,
+        "total_roundtrips": 19
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.6579594407182057,
+        "ann_return": 0.3217226134796821,
+        "sharpe": 1.3869081901142755,
+        "calmar": 2.068919095074736,
+        "mdd": -0.15550275225527443,
+        "win_rate": 0.6,
+        "profit_factor": 4.484505336243754,
+        "total_roundtrips": 10
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "ensemble",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.5726225195091679,
+        "ann_return": 0.1241161354875765,
+        "sharpe": 1.0618305947596078,
+        "calmar": 0.7008706334167258,
+        "mdd": -0.1770885090188652,
+        "win_rate": 0.6428571428571429,
+        "profit_factor": 4.642606799130819,
+        "total_roundtrips": 14
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.37490315912063976,
+        "ann_return": 0.23324357332230258,
+        "sharpe": 1.0753839027228733,
+        "calmar": 1.5603339024155387,
+        "mdd": -0.14948311573545892,
+        "win_rate": 0.5,
+        "profit_factor": 2.7130141662018583,
+        "total_roundtrips": 8
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "adaptive_regime",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.6251260737311142,
+        "ann_return": 0.1483144882387359,
+        "sharpe": 1.0539205464614245,
+        "calmar": 0.5782604025480935,
+        "mdd": -0.25648390860694015,
+        "win_rate": 0.38461538461538464,
+        "profit_factor": 2.4505952397154522,
+        "total_roundtrips": 26
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.20418526908433932,
+        "ann_return": 0.18410388896909025,
+        "sharpe": 0.8358976941934195,
+        "calmar": 1.2851775688796627,
+        "mdd": -0.14325171355760224,
+        "win_rate": 0.6,
+        "profit_factor": 2.32438767099207,
+        "total_roundtrips": 10
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "macd_volume",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.3692039722455829,
+        "ann_return": 0.09183432846933569,
+        "sharpe": 1.0816519039005228,
+        "calmar": 1.1705398665143179,
+        "mdd": -0.07845467813209406,
+        "win_rate": 0.38461538461538464,
+        "profit_factor": 3.204114844230037,
+        "total_roundtrips": 13
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.32263464250567475,
+        "ann_return": 0.24739110867349848,
+        "sharpe": 1.3099275470526892,
+        "calmar": 1.4723136004877626,
+        "mdd": -0.16802881437084327,
+        "win_rate": 0.5714285714285714,
+        "profit_factor": 3.1059502945259605,
+        "total_roundtrips": 7
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "champion",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.5860822092347628,
+        "ann_return": 0.13644600828517778,
+        "sharpe": 1.1590978810175958,
+        "calmar": 1.0316140995057832,
+        "mdd": -0.13226458260847107,
+        "win_rate": 0.5333333333333333,
+        "profit_factor": 3.5776845388589167,
+        "total_roundtrips": 15
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.3919844004230766,
+        "ann_return": 0.2996187802073675,
+        "sharpe": 1.2682486756663762,
+        "calmar": 1.087362227251206,
+        "mdd": -0.27554643034060555,
+        "win_rate": 0.6,
+        "profit_factor": 2.2064519223773393,
+        "total_roundtrips": 5
+      }
+    }
+  },
+  {
+    "data": "BTCKRW_1d",
+    "strategy": "champion_v2",
+    "fixed_split": {
+      "train": {
+        "label": "train (in-sample)",
+        "n_candles": 1500,
+        "period": "2020-01-01 ~ 2024-02-08",
+        "cum_return": 0.6075869753981749,
+        "ann_return": 0.13878274245431255,
+        "sharpe": 1.3251717344990959,
+        "calmar": 1.1689498959586884,
+        "mdd": -0.11872428658657264,
+        "win_rate": 0.5882352941176471,
+        "profit_factor": 4.042648705015989,
+        "total_roundtrips": 17
+      },
+      "test": {
+        "label": "test (out-of-sample)",
+        "n_candles": 644,
+        "period": "2024-02-09 ~ 2025-11-13",
+        "cum_return": 0.44913944461380106,
+        "ann_return": 0.328351552685083,
+        "sharpe": 1.5065506270131614,
+        "calmar": 1.5838580808839642,
+        "mdd": -0.20731122102823973,
+        "win_rate": 0.4444444444444444,
+        "profit_factor": 2.4760073033223398,
+        "total_roundtrips": 9
+      }
+    }
+  }
+]

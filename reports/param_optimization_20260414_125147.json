@@ -1,0 +1,2635 @@
+{
+  "generated_at": "20260414_125147",
+  "mdd_threshold": -0.25,
+  "env": {
+    "cash": 10000,
+    "slippage_bps": 5,
+    "commission_bps": 5,
+    "sizer": "PercentSizer(20%)"
+  },
+  "datasets": [
+    "data/ohlcv_full_BTCKRW_4h.parquet",
+    "data/ohlcv_full_ETHKRW_1h.parquet"
+  ],
+  "results": {
+    "supertrend": [
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 2.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.2415673938345373,
+        "sharpe": 1.283947460047809,
+        "mdd": -0.15819573632920902,
+        "win_rate": 0.4117647058823529,
+        "profit_factor": 2.1272993544536223,
+        "total_roundtrips": 102,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 2.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.35050483767998,
+        "sharpe": 1.930794737262166,
+        "mdd": -0.07694561908426911,
+        "win_rate": 0.40771349862258954,
+        "profit_factor": 1.8652540562832978,
+        "total_roundtrips": 363,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 2.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.1854856254917636,
+        "sharpe": 1.3048909301610099,
+        "mdd": -0.12268786415843169,
+        "win_rate": 0.43434343434343436,
+        "profit_factor": 2.1836742634015174,
+        "total_roundtrips": 99,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 2.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.2949516668435965,
+        "sharpe": 1.889115999767133,
+        "mdd": -0.07560879120652952,
+        "win_rate": 0.40229885057471265,
+        "profit_factor": 1.9019520043217224,
+        "total_roundtrips": 348,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 2.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.5181544066275054,
+        "sharpe": 1.5236761172458204,
+        "mdd": -0.11073165578812882,
+        "win_rate": 0.4444444444444444,
+        "profit_factor": 2.5566120012367963,
+        "total_roundtrips": 99,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 2.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.262400840028402,
+        "sharpe": 1.8579581815408912,
+        "mdd": -0.07398568954417628,
+        "win_rate": 0.39067055393586003,
+        "profit_factor": 1.9067873426361077,
+        "total_roundtrips": 343,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.0,
+          "sma_period": 150
+        },
+        "cum_return": 1.0989740452160608,
+        "sharpe": 1.0998878073774252,
+        "mdd": -0.21276981894368796,
+        "win_rate": 0.39759036144578314,
+        "profit_factor": 2.0713130590005866,
+        "total_roundtrips": 83,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.0,
+          "sma_period": 150
+        },
+        "cum_return": 0.9618762247428732,
+        "sharpe": 1.5193626853313769,
+        "mdd": -0.08164689882032894,
+        "win_rate": 0.3854166666666667,
+        "profit_factor": 1.7168431800895882,
+        "total_roundtrips": 288,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.0,
+          "sma_period": 200
+        },
+        "cum_return": 1.0975471125968301,
+        "sharpe": 1.1578029714337263,
+        "mdd": -0.13381567367641534,
+        "win_rate": 0.4,
+        "profit_factor": 2.2360002633635685,
+        "total_roundtrips": 80,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.0,
+          "sma_period": 200
+        },
+        "cum_return": 0.8378674207991752,
+        "sharpe": 1.408059115979325,
+        "mdd": -0.07738120981880525,
+        "win_rate": 0.38661710037174724,
+        "profit_factor": 1.7064916948076108,
+        "total_roundtrips": 269,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.0,
+          "sma_period": 250
+        },
+        "cum_return": 1.3485137137006258,
+        "sharpe": 1.3175876040159034,
+        "mdd": -0.11409769007646287,
+        "win_rate": 0.41025641025641024,
+        "profit_factor": 2.6488832500589776,
+        "total_roundtrips": 78,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.0,
+          "sma_period": 250
+        },
+        "cum_return": 0.8113556036589074,
+        "sharpe": 1.3829161843335152,
+        "mdd": -0.08052263148650185,
+        "win_rate": 0.3805970149253731,
+        "profit_factor": 1.7091007720349258,
+        "total_roundtrips": 268,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.5,
+          "sma_period": 150
+        },
+        "cum_return": 0.8924832255142683,
+        "sharpe": 1.0388080974992973,
+        "mdd": -0.1598630943700936,
+        "win_rate": 0.4153846153846154,
+        "profit_factor": 2.017275715180344,
+        "total_roundtrips": 65,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.5,
+          "sma_period": 150
+        },
+        "cum_return": 0.9372031353864019,
+        "sharpe": 1.5007030855686783,
+        "mdd": -0.08621682101281647,
+        "win_rate": 0.37777777777777777,
+        "profit_factor": 1.7453241841533176,
+        "total_roundtrips": 270,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.5,
+          "sma_period": 200
+        },
+        "cum_return": 0.9713867375692788,
+        "sharpe": 1.135225652797794,
+        "mdd": -0.1273216079279883,
+        "win_rate": 0.4126984126984127,
+        "profit_factor": 2.2819724816516853,
+        "total_roundtrips": 63,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.5,
+          "sma_period": 200
+        },
+        "cum_return": 0.8485387398071751,
+        "sharpe": 1.437246563948542,
+        "mdd": -0.08833033168269455,
+        "win_rate": 0.38095238095238093,
+        "profit_factor": 1.7269790237837042,
+        "total_roundtrips": 252,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.1411871529253972,
+        "sharpe": 1.3046337383773978,
+        "mdd": -0.1139546827888912,
+        "win_rate": 0.423728813559322,
+        "profit_factor": 2.7083402101003786,
+        "total_roundtrips": 59,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 7,
+          "st_multiplier": 3.5,
+          "sma_period": 250
+        },
+        "cum_return": 0.8632213219194695,
+        "sharpe": 1.4602966386669431,
+        "mdd": -0.08661419118247038,
+        "win_rate": 0.3821138211382114,
+        "profit_factor": 1.7824687977429388,
+        "total_roundtrips": 246,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 2.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.2155651468988413,
+        "sharpe": 1.2386301218909865,
+        "mdd": -0.16019114675737745,
+        "win_rate": 0.3838383838383838,
+        "profit_factor": 2.045343987162904,
+        "total_roundtrips": 99,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 2.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.437624163505069,
+        "sharpe": 2.0164150776896097,
+        "mdd": -0.060218755727381224,
+        "win_rate": 0.40502793296089384,
+        "profit_factor": 1.9289412783061897,
+        "total_roundtrips": 358,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 2.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.2291591973428861,
+        "sharpe": 1.3343563845657254,
+        "mdd": -0.136726477336099,
+        "win_rate": 0.41304347826086957,
+        "profit_factor": 2.2020274180540476,
+        "total_roundtrips": 92,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 2.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.44488967952958,
+        "sharpe": 2.0285924536531508,
+        "mdd": -0.055312263952933094,
+        "win_rate": 0.40524781341107874,
+        "profit_factor": 1.9975803115988866,
+        "total_roundtrips": 343,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 2.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.532837708464771,
+        "sharpe": 1.5236872020857417,
+        "mdd": -0.10853192768606812,
+        "win_rate": 0.41935483870967744,
+        "profit_factor": 2.5247998316366846,
+        "total_roundtrips": 93,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 2.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.3923567436725461,
+        "sharpe": 1.9723567856658024,
+        "mdd": -0.05874851398071945,
+        "win_rate": 0.39349112426035504,
+        "profit_factor": 1.9895641798779102,
+        "total_roundtrips": 338,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.0,
+          "sma_period": 150
+        },
+        "cum_return": 0.9192364554605046,
+        "sharpe": 1.035460194244365,
+        "mdd": -0.1649300281777647,
+        "win_rate": 0.4,
+        "profit_factor": 1.917206192417736,
+        "total_roundtrips": 75,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.0,
+          "sma_period": 150
+        },
+        "cum_return": 0.9443701270051512,
+        "sharpe": 1.517249591578179,
+        "mdd": -0.08529662983342956,
+        "win_rate": 0.381294964028777,
+        "profit_factor": 1.7419647562686251,
+        "total_roundtrips": 278,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.0,
+          "sma_period": 200
+        },
+        "cum_return": 0.8952799089559331,
+        "sharpe": 1.068772924698861,
+        "mdd": -0.1497478678878832,
+        "win_rate": 0.4084507042253521,
+        "profit_factor": 2.037192378503702,
+        "total_roundtrips": 71,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.0,
+          "sma_period": 200
+        },
+        "cum_return": 0.796832458561908,
+        "sharpe": 1.3774008349891669,
+        "mdd": -0.08035102497841973,
+        "win_rate": 0.3745173745173745,
+        "profit_factor": 1.7148582365761826,
+        "total_roundtrips": 259,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.0,
+          "sma_period": 250
+        },
+        "cum_return": 1.1346230651525078,
+        "sharpe": 1.2504334221739148,
+        "mdd": -0.10458874852114197,
+        "win_rate": 0.4305555555555556,
+        "profit_factor": 2.3657395518896625,
+        "total_roundtrips": 72,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.0,
+          "sma_period": 250
+        },
+        "cum_return": 0.8212073154160315,
+        "sharpe": 1.4170318085468658,
+        "mdd": -0.08677652012487869,
+        "win_rate": 0.37254901960784315,
+        "profit_factor": 1.768992900162198,
+        "total_roundtrips": 255,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.5,
+          "sma_period": 150
+        },
+        "cum_return": 0.9241239766617,
+        "sharpe": 1.037981813939627,
+        "mdd": -0.17726211424332805,
+        "win_rate": 0.45588235294117646,
+        "profit_factor": 2.1349431895680238,
+        "total_roundtrips": 68,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.5,
+          "sma_period": 150
+        },
+        "cum_return": 0.9986768687195537,
+        "sharpe": 1.5551439872649109,
+        "mdd": -0.07961016990059777,
+        "win_rate": 0.38823529411764707,
+        "profit_factor": 1.825923090177577,
+        "total_roundtrips": 255,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.003859566226779,
+        "sharpe": 1.1222167961946456,
+        "mdd": -0.14943729683672435,
+        "win_rate": 0.4375,
+        "profit_factor": 2.359346704645947,
+        "total_roundtrips": 64,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.5,
+          "sma_period": 200
+        },
+        "cum_return": 0.8451584545013826,
+        "sharpe": 1.4572779914557414,
+        "mdd": -0.07211048326417457,
+        "win_rate": 0.3905579399141631,
+        "profit_factor": 1.810482819139386,
+        "total_roundtrips": 233,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.0974436767149238,
+        "sharpe": 1.2333134474257994,
+        "mdd": -0.13487280495684562,
+        "win_rate": 0.4406779661016949,
+        "profit_factor": 2.744713148923798,
+        "total_roundtrips": 59,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 10,
+          "st_multiplier": 3.5,
+          "sma_period": 250
+        },
+        "cum_return": 0.8439118623738691,
+        "sharpe": 1.4542876244365497,
+        "mdd": -0.06938472112553828,
+        "win_rate": 0.3922413793103448,
+        "profit_factor": 1.830874314038048,
+        "total_roundtrips": 232,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 2.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.2944517990182014,
+        "sharpe": 1.341887683231286,
+        "mdd": -0.15070980291452352,
+        "win_rate": 0.3888888888888889,
+        "profit_factor": 2.2859309380740953,
+        "total_roundtrips": 90,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 2.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.4400401381525576,
+        "sharpe": 1.985855404711067,
+        "mdd": -0.06293268415952524,
+        "win_rate": 0.4083333333333333,
+        "profit_factor": 1.9138032519477348,
+        "total_roundtrips": 360,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 2.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.3060190336146733,
+        "sharpe": 1.4363979705698893,
+        "mdd": -0.09856078836942805,
+        "win_rate": 0.4117647058823529,
+        "profit_factor": 2.512509600299838,
+        "total_roundtrips": 85,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 2.5,
+          "sma_period": 200
+        },
+        "cum_return": 1.361267758261857,
+        "sharpe": 1.9400989512500255,
+        "mdd": -0.060603740536807504,
+        "win_rate": 0.40406976744186046,
+        "profit_factor": 1.9451851857470965,
+        "total_roundtrips": 344,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 2.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.613309614162438,
+        "sharpe": 1.6179641735738162,
+        "mdd": -0.11555749153960782,
+        "win_rate": 0.4235294117647059,
+        "profit_factor": 2.9312627044659525,
+        "total_roundtrips": 85,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 2.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.378686234155193,
+        "sharpe": 1.9341416063482808,
+        "mdd": -0.06380319639427323,
+        "win_rate": 0.3965014577259475,
+        "profit_factor": 1.960520789072671,
+        "total_roundtrips": 343,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.0,
+          "sma_period": 150
+        },
+        "cum_return": 1.005504198250871,
+        "sharpe": 1.0833533962953497,
+        "mdd": -0.17007192394920767,
+        "win_rate": 0.4155844155844156,
+        "profit_factor": 1.9803283695984975,
+        "total_roundtrips": 77,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.0,
+          "sma_period": 150
+        },
+        "cum_return": 1.1592201427152595,
+        "sharpe": 1.7055731455425598,
+        "mdd": -0.0671017492082312,
+        "win_rate": 0.39416058394160586,
+        "profit_factor": 1.8626053100168503,
+        "total_roundtrips": 274,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.0,
+          "sma_period": 200
+        },
+        "cum_return": 0.9125312990464685,
+        "sharpe": 1.062983496506509,
+        "mdd": -0.1442507774714582,
+        "win_rate": 0.3972602739726027,
+        "profit_factor": 1.9732561486180116,
+        "total_roundtrips": 73,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.0,
+          "sma_period": 200
+        },
+        "cum_return": 1.0706420627004034,
+        "sharpe": 1.6318856422149624,
+        "mdd": -0.06819024029649345,
+        "win_rate": 0.38697318007662834,
+        "profit_factor": 1.8749958862086689,
+        "total_roundtrips": 261,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.0,
+          "sma_period": 250
+        },
+        "cum_return": 1.1830388566335843,
+        "sharpe": 1.2692079181783342,
+        "mdd": -0.11078647624785465,
+        "win_rate": 0.4246575342465753,
+        "profit_factor": 2.3726040796111887,
+        "total_roundtrips": 73,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.0,
+          "sma_period": 250
+        },
+        "cum_return": 1.1704091790867426,
+        "sharpe": 1.7260562681262381,
+        "mdd": -0.0676550018162253,
+        "win_rate": 0.39147286821705424,
+        "profit_factor": 1.9885239221181628,
+        "total_roundtrips": 258,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.5,
+          "sma_period": 150
+        },
+        "cum_return": 0.9315435489254269,
+        "sharpe": 1.0275417525578239,
+        "mdd": -0.14093168417404278,
+        "win_rate": 0.4626865671641791,
+        "profit_factor": 2.137570579275247,
+        "total_roundtrips": 67,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.5,
+          "sma_period": 150
+        },
+        "cum_return": 1.080235185380371,
+        "sharpe": 1.6329178928004118,
+        "mdd": -0.07503469584140587,
+        "win_rate": 0.4024390243902439,
+        "profit_factor": 1.9182428692465983,
+        "total_roundtrips": 246,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.5,
+          "sma_period": 200
+        },
+        "cum_return": 0.8823901722093905,
+        "sharpe": 1.0159687077236543,
+        "mdd": -0.1382404459706743,
+        "win_rate": 0.42857142857142855,
+        "profit_factor": 2.145478601830375,
+        "total_roundtrips": 63,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.5,
+          "sma_period": 200
+        },
+        "cum_return": 0.8530915517086126,
+        "sharpe": 1.4948409559328169,
+        "mdd": -0.06844226582525959,
+        "win_rate": 0.4026548672566372,
+        "profit_factor": 1.8731492733439303,
+        "total_roundtrips": 226,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "BTCKRW_4h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.5,
+          "sma_period": 250
+        },
+        "cum_return": 1.1707801631294728,
+        "sharpe": 1.3136632321557993,
+        "mdd": -0.12236912374949416,
+        "win_rate": 0.45,
+        "profit_factor": 2.7198478281189993,
+        "total_roundtrips": 60,
+        "filtered": false
+      },
+      {
+        "strategy": "supertrend",
+        "data": "ETHKRW_1h",
+        "params": {
+          "st_period": 14,
+          "st_multiplier": 3.5,
+          "sma_period": 250
+        },
+        "cum_return": 0.7337205672678433,
+        "sharpe": 1.36225575633701,
+        "mdd": -0.06563214860337985,
+        "win_rate": 0.3891402714932127,
+        "profit_factor": 1.792736417807493,
+        "total_roundtrips": 221,
+        "filtered": false
+      }
+    ],
+    "adaptive_regime": [
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 1.0539567085661918,
+        "sharpe": 0.9573491593657907,
+        "mdd": -0.24139776514071265,
+        "win_rate": 0.40069686411149824,
+        "profit_factor": 1.4105014433138225,
+        "total_roundtrips": 287,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 1.1737359571753898,
+        "sharpe": 1.040640059771565,
+        "mdd": -0.22557286181242464,
+        "win_rate": 0.4128113879003559,
+        "profit_factor": 1.4627519705290637,
+        "total_roundtrips": 281,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4063112522904737,
+        "sharpe": 0.6249003031531276,
+        "mdd": -0.24778551524972725,
+        "win_rate": 0.34771784232365144,
+        "profit_factor": 1.1132055017542508,
+        "total_roundtrips": 1205,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 1.0882819436938198,
+        "sharpe": 0.9743174545670805,
+        "mdd": -0.21806219851584074,
+        "win_rate": 0.43416370106761565,
+        "profit_factor": 1.413309188064693,
+        "total_roundtrips": 281,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3990698578184595,
+        "sharpe": 0.6126626208771205,
+        "mdd": -0.23352129795505594,
+        "win_rate": 0.3473861720067454,
+        "profit_factor": 1.1109661719884256,
+        "total_roundtrips": 1186,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 1.1089291307779194,
+        "sharpe": 0.9913280882568664,
+        "mdd": -0.24022432773575286,
+        "win_rate": 0.4131944444444444,
+        "profit_factor": 1.4249473443452643,
+        "total_roundtrips": 288,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 0.44857027847654396,
+        "sharpe": 0.6810721926890382,
+        "mdd": -0.23036057042573677,
+        "win_rate": 0.35083333333333333,
+        "profit_factor": 1.1266577279738965,
+        "total_roundtrips": 1200,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 1.0673918425785711,
+        "sharpe": 0.9571927747464579,
+        "mdd": -0.21835789091287128,
+        "win_rate": 0.42857142857142855,
+        "profit_factor": 1.4046088568182526,
+        "total_roundtrips": 280,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4203150662426449,
+        "sharpe": 0.6391255862131621,
+        "mdd": -0.23056195386854927,
+        "win_rate": 0.35598980458793544,
+        "profit_factor": 1.1176061865808373,
+        "total_roundtrips": 1177,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 1.1377471634825707,
+        "sharpe": 0.9972226431712251,
+        "mdd": -0.22003157003755613,
+        "win_rate": 0.4343065693430657,
+        "profit_factor": 1.4415472539607372,
+        "total_roundtrips": 274,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 0.48373019004464934,
+        "sharpe": 0.7122772574943566,
+        "mdd": -0.21086229130658185,
+        "win_rate": 0.35324675324675325,
+        "profit_factor": 1.1321813195527386,
+        "total_roundtrips": 1155,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 1.17955028184275,
+        "sharpe": 1.0517464807744965,
+        "mdd": -0.2294385444891368,
+        "win_rate": 0.4326241134751773,
+        "profit_factor": 1.4644941281236965,
+        "total_roundtrips": 282,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 0.38866288958398254,
+        "sharpe": 0.6014097906718769,
+        "mdd": -0.24351863218280345,
+        "win_rate": 0.35299073294018535,
+        "profit_factor": 1.1087664658803762,
+        "total_roundtrips": 1187,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 1.0830679029693075,
+        "sharpe": 0.9568136733654949,
+        "mdd": -0.22068242447294772,
+        "win_rate": 0.420863309352518,
+        "profit_factor": 1.4133446600212836,
+        "total_roundtrips": 278,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4874689430161212,
+        "sharpe": 0.7180993037059276,
+        "mdd": -0.22415505866452257,
+        "win_rate": 0.3555363321799308,
+        "profit_factor": 1.1339310911655573,
+        "total_roundtrips": 1156,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 1.1359016016350951,
+        "sharpe": 0.9996495284630662,
+        "mdd": -0.22525374077071125,
+        "win_rate": 0.4227941176470588,
+        "profit_factor": 1.4429184405380775,
+        "total_roundtrips": 272,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 0.5432644267029627,
+        "sharpe": 0.7933936976376209,
+        "mdd": -0.18459197646817538,
+        "win_rate": 0.3593339176161262,
+        "profit_factor": 1.1507942046330892,
+        "total_roundtrips": 1141,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 0.8967424676986759,
+        "sharpe": 0.8510892059973368,
+        "mdd": -0.23374079026600836,
+        "win_rate": 0.40344827586206894,
+        "profit_factor": 1.3452411126047703,
+        "total_roundtrips": 290,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 0.365108638780157,
+        "sharpe": 0.5851108810687429,
+        "mdd": -0.24394148877513955,
+        "win_rate": 0.35601659751037346,
+        "profit_factor": 1.1055128755984878,
+        "total_roundtrips": 1205,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 1.1870389546887834,
+        "sharpe": 1.0473718406042871,
+        "mdd": -0.22471330080226393,
+        "win_rate": 0.4119718309859155,
+        "profit_factor": 1.469684715912505,
+        "total_roundtrips": 284,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 1.1090976186653543,
+        "sharpe": 0.9876415171793332,
+        "mdd": -0.2124741665751384,
+        "win_rate": 0.43462897526501765,
+        "profit_factor": 1.4240457607124133,
+        "total_roundtrips": 283,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 0.35275528382651644,
+        "sharpe": 0.5604229439042804,
+        "mdd": -0.24109845652528972,
+        "win_rate": 0.3524936601859679,
+        "profit_factor": 1.1003621733842595,
+        "total_roundtrips": 1183,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 1.1342155149292608,
+        "sharpe": 1.0117087138618301,
+        "mdd": -0.23314381087350355,
+        "win_rate": 0.42214532871972316,
+        "profit_factor": 1.437441397590982,
+        "total_roundtrips": 289,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 0.4140942748949228,
+        "sharpe": 0.6452613627103438,
+        "mdd": -0.23410549273541026,
+        "win_rate": 0.35343383584589616,
+        "profit_factor": 1.1193466348140397,
+        "total_roundtrips": 1194,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 1.1021526343490389,
+        "sharpe": 0.9811414541890816,
+        "mdd": -0.21273180998074281,
+        "win_rate": 0.4326241134751773,
+        "profit_factor": 1.4225489097104318,
+        "total_roundtrips": 282,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 0.3914654926156158,
+        "sharpe": 0.6096051397762995,
+        "mdd": -0.22793544709616365,
+        "win_rate": 0.36030664395229983,
+        "profit_factor": 1.1120219016953587,
+        "total_roundtrips": 1174,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 1.147552344987639,
+        "sharpe": 0.9984644398164847,
+        "mdd": -0.2159998957507674,
+        "win_rate": 0.4332129963898917,
+        "profit_factor": 1.4471574921439734,
+        "total_roundtrips": 277,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 0.43247375367815466,
+        "sharpe": 0.6578683071045761,
+        "mdd": -0.2167862112990132,
+        "win_rate": 0.35751295336787564,
+        "profit_factor": 1.12090001634556,
+        "total_roundtrips": 1158,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 1.2250974091412274,
+        "sharpe": 1.0838037496973036,
+        "mdd": -0.21847895726775346,
+        "win_rate": 0.4397163120567376,
+        "profit_factor": 1.490063295490107,
+        "total_roundtrips": 282,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 0.35275555511347156,
+        "sharpe": 0.5612745881125564,
+        "mdd": -0.23787143732080274,
+        "win_rate": 0.3558748943364328,
+        "profit_factor": 1.1016916166345623,
+        "total_roundtrips": 1183,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 1.1170879710205712,
+        "sharpe": 0.9797794741905959,
+        "mdd": -0.21510387790816254,
+        "win_rate": 0.425,
+        "profit_factor": 1.4311041213774858,
+        "total_roundtrips": 280,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 0.44728230572156247,
+        "sharpe": 0.6772369001586005,
+        "mdd": -0.22602460310602235,
+        "win_rate": 0.3601036269430052,
+        "profit_factor": 1.1257076735028657,
+        "total_roundtrips": 1158,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 1.157559621858979,
+        "sharpe": 1.01338747513947,
+        "mdd": -0.2197589868714579,
+        "win_rate": 0.4233576642335766,
+        "profit_factor": 1.454621396306636,
+        "total_roundtrips": 274,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 0.5022820810671309,
+        "sharpe": 0.7542944964349746,
+        "mdd": -0.18893936265692424,
+        "win_rate": 0.36339754816112085,
+        "profit_factor": 1.1422709654494663,
+        "total_roundtrips": 1142,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 0.9479784084959515,
+        "sharpe": 0.9048315877212265,
+        "mdd": -0.22052227420367732,
+        "win_rate": 0.42105263157894735,
+        "profit_factor": 1.3695934502665756,
+        "total_roundtrips": 285,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 1.2399018697947968,
+        "sharpe": 1.0998044004860397,
+        "mdd": -0.2155282023518238,
+        "win_rate": 0.4265232974910394,
+        "profit_factor": 1.497665273187753,
+        "total_roundtrips": 279,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 1.1650571612236575,
+        "sharpe": 1.0413501555979559,
+        "mdd": -0.20681302005507884,
+        "win_rate": 0.4444444444444444,
+        "profit_factor": 1.4563646845337812,
+        "total_roundtrips": 279,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3668200315463255,
+        "sharpe": 0.5808980953171943,
+        "mdd": -0.2467641212057562,
+        "win_rate": 0.35519591141396933,
+        "profit_factor": 1.1051126406387957,
+        "total_roundtrips": 1174,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 1.2130106220958128,
+        "sharpe": 1.081877042405662,
+        "mdd": -0.2249881870646272,
+        "win_rate": 0.43661971830985913,
+        "profit_factor": 1.4792837578580045,
+        "total_roundtrips": 284,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 1.1513185187848123,
+        "sharpe": 1.0289824453648784,
+        "mdd": -0.2069398998130969,
+        "win_rate": 0.44086021505376344,
+        "profit_factor": 1.4507600787439823,
+        "total_roundtrips": 279,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 0.40222759317422563,
+        "sharpe": 0.6255561366196521,
+        "mdd": -0.228701424662498,
+        "win_rate": 0.36363636363636365,
+        "profit_factor": 1.1168819573267628,
+        "total_roundtrips": 1166,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 1.2348395257056386,
+        "sharpe": 1.0815721606905708,
+        "mdd": -0.20520363399378572,
+        "win_rate": 0.4411764705882353,
+        "profit_factor": 1.4987720396520656,
+        "total_roundtrips": 272,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 0.4559351218088512,
+        "sharpe": 0.6892216292449547,
+        "mdd": -0.2077805519011927,
+        "win_rate": 0.3622936576889661,
+        "profit_factor": 1.1293364047105396,
+        "total_roundtrips": 1151,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 1.2723683935315857,
+        "sharpe": 1.133661598049761,
+        "mdd": -0.21259678893723044,
+        "win_rate": 0.45,
+        "profit_factor": 1.51699763691313,
+        "total_roundtrips": 280,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 0.36494164324690725,
+        "sharpe": 0.5788870879025333,
+        "mdd": -0.24178438231198063,
+        "win_rate": 0.35914893617021276,
+        "profit_factor": 1.1067768446187627,
+        "total_roundtrips": 1175,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 1.2000151409080848,
+        "sharpe": 1.059450699223338,
+        "mdd": -0.20421287207608474,
+        "win_rate": 0.43478260869565216,
+        "profit_factor": 1.4791402252355956,
+        "total_roundtrips": 276,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4761596374707464,
+        "sharpe": 0.7152001466778085,
+        "mdd": -0.21938721738057143,
+        "win_rate": 0.36498257839721254,
+        "profit_factor": 1.1357439533925906,
+        "total_roundtrips": 1148,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 1.2311534115046632,
+        "sharpe": 1.0840109949220615,
+        "mdd": -0.2105703977864497,
+        "win_rate": 0.4312267657992565,
+        "profit_factor": 1.4993576075969435,
+        "total_roundtrips": 269,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 100,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 0.5114372955397877,
+        "sharpe": 0.7688579402232136,
+        "mdd": -0.1836387855597006,
+        "win_rate": 0.36675461741424803,
+        "profit_factor": 1.1474477676589965,
+        "total_roundtrips": 1137,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 1.2942340783015664,
+        "sharpe": 1.1659974169515634,
+        "mdd": -0.1751815838288462,
+        "win_rate": 0.425,
+        "profit_factor": 1.5733444511556791,
+        "total_roundtrips": 240,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 0.4379343346150726,
+        "sharpe": 0.7125560791682012,
+        "mdd": -0.18683457963367744,
+        "win_rate": 0.36056338028169016,
+        "profit_factor": 1.1435362071606348,
+        "total_roundtrips": 1065,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 1.384051325031824,
+        "sharpe": 1.208645477360446,
+        "mdd": -0.15718682362716985,
+        "win_rate": 0.4327731092436975,
+        "profit_factor": 1.6162956531334336,
+        "total_roundtrips": 238,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 0.47928524651509097,
+        "sharpe": 0.7590516087057255,
+        "mdd": -0.16767608997674643,
+        "win_rate": 0.3652007648183556,
+        "profit_factor": 1.1571889947256984,
+        "total_roundtrips": 1046,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 1.329905802001449,
+        "sharpe": 1.1890239170665244,
+        "mdd": -0.16099631106829093,
+        "win_rate": 0.45228215767634855,
+        "profit_factor": 1.5713634606908575,
+        "total_roundtrips": 241,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3816693626225742,
+        "sharpe": 0.6295624283894603,
+        "mdd": -0.1954968223276442,
+        "win_rate": 0.35559736594543745,
+        "profit_factor": 1.1243529248044741,
+        "total_roundtrips": 1063,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 1.3251053055627597,
+        "sharpe": 1.1765277239707503,
+        "mdd": -0.16643643852855694,
+        "win_rate": 0.43209876543209874,
+        "profit_factor": 1.5718864176932275,
+        "total_roundtrips": 243,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 0.4845282161231541,
+        "sharpe": 0.7697335042330636,
+        "mdd": -0.16802010112742305,
+        "win_rate": 0.36650717703349284,
+        "profit_factor": 1.1604258544757975,
+        "total_roundtrips": 1045,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 1.337903217845608,
+        "sharpe": 1.1917625508219107,
+        "mdd": -0.17055294011541888,
+        "win_rate": 0.4430379746835443,
+        "profit_factor": 1.5806242125323042,
+        "total_roundtrips": 237,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4011384383414458,
+        "sharpe": 0.6565063858774908,
+        "mdd": -0.1815706969502452,
+        "win_rate": 0.3632887189292543,
+        "profit_factor": 1.1325611495122294,
+        "total_roundtrips": 1046,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 1.304716877046383,
+        "sharpe": 1.1655177060051651,
+        "mdd": -0.1711422675571419,
+        "win_rate": 0.4444444444444444,
+        "profit_factor": 1.5561125983968798,
+        "total_roundtrips": 234,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 0.44944265498398317,
+        "sharpe": 0.7122515060797983,
+        "mdd": -0.1745686109069592,
+        "win_rate": 0.3533906399235912,
+        "profit_factor": 1.1441223072466038,
+        "total_roundtrips": 1047,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 1.3649930215117063,
+        "sharpe": 1.2256726755193355,
+        "mdd": -0.15507801911044017,
+        "win_rate": 0.453781512605042,
+        "profit_factor": 1.6015753104465544,
+        "total_roundtrips": 238,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 0.4335790812813658,
+        "sharpe": 0.6991224196888409,
+        "mdd": -0.18759846744751263,
+        "win_rate": 0.3646833013435701,
+        "profit_factor": 1.1409748332236276,
+        "total_roundtrips": 1042,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 1.2534199235739703,
+        "sharpe": 1.1272381057713818,
+        "mdd": -0.17476364415404733,
+        "win_rate": 0.4327731092436975,
+        "profit_factor": 1.5261619511212174,
+        "total_roundtrips": 238,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4603660396626632,
+        "sharpe": 0.7295231058748609,
+        "mdd": -0.1727570939019023,
+        "win_rate": 0.35679845708775315,
+        "profit_factor": 1.148547196141324,
+        "total_roundtrips": 1037,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 1.2875756017989306,
+        "sharpe": 1.1400497256000752,
+        "mdd": -0.1843991112706561,
+        "win_rate": 0.4297872340425532,
+        "profit_factor": 1.5324595773791683,
+        "total_roundtrips": 235,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 18,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3755254635687493,
+        "sharpe": 0.6136966792483065,
+        "mdd": -0.18015188350434186,
+        "win_rate": 0.3586337760910816,
+        "profit_factor": 1.121422495772941,
+        "total_roundtrips": 1054,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 1.0829707114275902,
+        "sharpe": 1.0127975345163778,
+        "mdd": -0.18610494678556855,
+        "win_rate": 0.42276422764227645,
+        "profit_factor": 1.460941477290982,
+        "total_roundtrips": 246,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 0.3697250408224806,
+        "sharpe": 0.626804282438751,
+        "mdd": -0.20709594268007836,
+        "win_rate": 0.36372093023255814,
+        "profit_factor": 1.1233483070630637,
+        "total_roundtrips": 1075,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 1.3315152716825716,
+        "sharpe": 1.160259357572129,
+        "mdd": -0.1692519485975904,
+        "win_rate": 0.4262295081967213,
+        "profit_factor": 1.578375902397407,
+        "total_roundtrips": 244,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4265786600350152,
+        "sharpe": 0.695973222099329,
+        "mdd": -0.19395202306048176,
+        "win_rate": 0.36587677725118484,
+        "profit_factor": 1.1408628235069282,
+        "total_roundtrips": 1055,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 1.3096475471002957,
+        "sharpe": 1.157164532900404,
+        "mdd": -0.16246923362052668,
+        "win_rate": 0.45081967213114754,
+        "profit_factor": 1.555568577846065,
+        "total_roundtrips": 244,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3506127413573632,
+        "sharpe": 0.5918341623436522,
+        "mdd": -0.21684775657465905,
+        "win_rate": 0.358950328022493,
+        "profit_factor": 1.114705226449901,
+        "total_roundtrips": 1067,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 1.2789185618092582,
+        "sharpe": 1.1350143480155588,
+        "mdd": -0.1657022813175213,
+        "win_rate": 0.4314516129032258,
+        "profit_factor": 1.5393394469114667,
+        "total_roundtrips": 248,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 0.4335041571610845,
+        "sharpe": 0.7098500054916186,
+        "mdd": -0.1845322933025627,
+        "win_rate": 0.36777251184834125,
+        "profit_factor": 1.1450018849736228,
+        "total_roundtrips": 1055,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 1.3007929213783478,
+        "sharpe": 1.1555530149194535,
+        "mdd": -0.17017918335494997,
+        "win_rate": 0.44214876033057854,
+        "profit_factor": 1.555484834313085,
+        "total_roundtrips": 242,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 0.3830555392345578,
+        "sharpe": 0.6371921162514965,
+        "mdd": -0.19795056146023593,
+        "win_rate": 0.36701620591039086,
+        "profit_factor": 1.127107329845149,
+        "total_roundtrips": 1049,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 1.2484674285432469,
+        "sharpe": 1.1064782144547651,
+        "mdd": -0.17399560317030915,
+        "win_rate": 0.4369747899159664,
+        "profit_factor": 1.5206001650765102,
+        "total_roundtrips": 238,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3763407475661784,
+        "sharpe": 0.621969509872283,
+        "mdd": -0.2014678322893637,
+        "win_rate": 0.35321969696969696,
+        "profit_factor": 1.1224571874099238,
+        "total_roundtrips": 1056,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 1.3293174844190334,
+        "sharpe": 1.189808113683383,
+        "mdd": -0.15442497535283672,
+        "win_rate": 0.45228215767634855,
+        "profit_factor": 1.5783012189989514,
+        "total_roundtrips": 241,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 0.3874729998411939,
+        "sharpe": 0.6433046130922223,
+        "mdd": -0.20138882987855022,
+        "win_rate": 0.3659695817490494,
+        "profit_factor": 1.1282215410733936,
+        "total_roundtrips": 1052,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 1.2309477819145251,
+        "sharpe": 1.0952927267510453,
+        "mdd": -0.17571728001059583,
+        "win_rate": 0.4315352697095436,
+        "profit_factor": 1.5106182786939577,
+        "total_roundtrips": 241,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 0.4159945131595171,
+        "sharpe": 0.6776737293961916,
+        "mdd": -0.19239899164284513,
+        "win_rate": 0.35816618911174786,
+        "profit_factor": 1.1354390431480912,
+        "total_roundtrips": 1047,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 1.2581755519061968,
+        "sharpe": 1.1049088699933693,
+        "mdd": -0.18540138013395346,
+        "win_rate": 0.4309623430962343,
+        "profit_factor": 1.5127151356676303,
+        "total_roundtrips": 239,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 22,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 0.3421078386312597,
+        "sharpe": 0.5735599899319997,
+        "mdd": -0.20244984382850406,
+        "win_rate": 0.3600377002827521,
+        "profit_factor": 1.1108718755317128,
+        "total_roundtrips": 1061,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 1.1032412853670066,
+        "sharpe": 1.0402665552486003,
+        "mdd": -0.17606217120158696,
+        "win_rate": 0.44129554655870445,
+        "profit_factor": 1.468447590235047,
+        "total_roundtrips": 247,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 40
+        },
+        "cum_return": 0.3407856994917988,
+        "sharpe": 0.5895927436917915,
+        "mdd": -0.2248143837151927,
+        "win_rate": 0.3714020427112349,
+        "profit_factor": 1.1138888226365964,
+        "total_roundtrips": 1077,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 1.3630422981093253,
+        "sharpe": 1.196241178517029,
+        "mdd": -0.1689589518639043,
+        "win_rate": 0.4403292181069959,
+        "profit_factor": 1.5937399152601575,
+        "total_roundtrips": 243,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 50
+        },
+        "cum_return": 0.3922196618654914,
+        "sharpe": 0.6534742369148334,
+        "mdd": -0.22390268890033171,
+        "win_rate": 0.3692162417374882,
+        "profit_factor": 1.1289304763068628,
+        "total_roundtrips": 1059,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 1.325812780412234,
+        "sharpe": 1.1814459025851696,
+        "mdd": -0.16228008827353002,
+        "win_rate": 0.45491803278688525,
+        "profit_factor": 1.567519050695909,
+        "total_roundtrips": 244,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 15,
+          "ema_slow": 60
+        },
+        "cum_return": 0.33012932098398395,
+        "sharpe": 0.56689544724587,
+        "mdd": -0.2372437267727021,
+        "win_rate": 0.36338028169014086,
+        "profit_factor": 1.1075942160497092,
+        "total_roundtrips": 1065,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 1.335489247419749,
+        "sharpe": 1.187689774093166,
+        "mdd": -0.15671897303196802,
+        "win_rate": 0.44534412955465585,
+        "profit_factor": 1.5710221891642815,
+        "total_roundtrips": 247,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 40
+        },
+        "cum_return": 0.37005128504543583,
+        "sharpe": 0.6283407413686876,
+        "mdd": -0.22301671778670562,
+        "win_rate": 0.3704052780395853,
+        "profit_factor": 1.1234148766175949,
+        "total_roundtrips": 1061,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 1.3247452667031614,
+        "sharpe": 1.184499285063416,
+        "mdd": -0.1686012218143078,
+        "win_rate": 0.45491803278688525,
+        "profit_factor": 1.5719335698190315,
+        "total_roundtrips": 244,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 50
+        },
+        "cum_return": 0.3639514818587726,
+        "sharpe": 0.6141309872572095,
+        "mdd": -0.21612797198756484,
+        "win_rate": 0.37012369172216936,
+        "profit_factor": 1.1202067009102463,
+        "total_roundtrips": 1051,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 1.319275521331877,
+        "sharpe": 1.177953593602668,
+        "mdd": -0.16818734121744106,
+        "win_rate": 0.4495798319327731,
+        "profit_factor": 1.565677756487869,
+        "total_roundtrips": 238,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 20,
+          "ema_slow": 60
+        },
+        "cum_return": 0.36352795768888546,
+        "sharpe": 0.6076306123805526,
+        "mdd": -0.20726726820479147,
+        "win_rate": 0.36045411542100286,
+        "profit_factor": 1.1178732703176602,
+        "total_roundtrips": 1057,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 1.3546191642634984,
+        "sharpe": 1.2225471001174792,
+        "mdd": -0.15263651394732192,
+        "win_rate": 0.46311475409836067,
+        "profit_factor": 1.5917399815192697,
+        "total_roundtrips": 244,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 40
+        },
+        "cum_return": 0.36437084826169897,
+        "sharpe": 0.6142929495341167,
+        "mdd": -0.22288117717308864,
+        "win_rate": 0.3687203791469194,
+        "profit_factor": 1.1201662077877148,
+        "total_roundtrips": 1055,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 1.2938218509925012,
+        "sharpe": 1.1596553925438255,
+        "mdd": -0.17045324418285546,
+        "win_rate": 0.44214876033057854,
+        "profit_factor": 1.5501562612862199,
+        "total_roundtrips": 242,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 50
+        },
+        "cum_return": 0.39661904634666945,
+        "sharpe": 0.6555129445967053,
+        "mdd": -0.20239627887446077,
+        "win_rate": 0.3629417382999045,
+        "profit_factor": 1.128986026566539,
+        "total_roundtrips": 1047,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "BTCKRW_4h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 1.318142110907504,
+        "sharpe": 1.1654109346999542,
+        "mdd": -0.1800678722888559,
+        "win_rate": 0.4411764705882353,
+        "profit_factor": 1.5502469575220905,
+        "total_roundtrips": 238,
+        "filtered": false
+      },
+      {
+        "strategy": "adaptive_regime",
+        "data": "ETHKRW_1h",
+        "params": {
+          "sma_long": 200,
+          "bull_adx_threshold": 25,
+          "ema_fast": 25,
+          "ema_slow": 60
+        },
+        "cum_return": 0.32097935926891363,
+        "sharpe": 0.5476440069711367,
+        "mdd": -0.20258068660194817,
+        "win_rate": 0.3659454374412041,
+        "profit_factor": 1.1048541818977817,
+        "total_roundtrips": 1063,
+        "filtered": false
+      }
+    ]
+  }
+}
