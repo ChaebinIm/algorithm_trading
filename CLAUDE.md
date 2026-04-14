@@ -153,13 +153,54 @@ python collect_upbit.py
 
 ---
 
-## 다음 탐구 방향 (미완료)
+## 실거래 봇 현황 (2026-04-14 완성)
 
-### 실거래 자동화 (최우선)
-- [ ] `trader.py` 실거래 봇 완성 — 바이낸스 API 연동, 전략 신호 → 자동 주문
-- [ ] 리스크 관리 레이어 — 일일 최대 손실 한도, 전략별 포지션 한도
-- [ ] 운용 모니터링 — 포지션 현황, 일별 P&L, 이상 감지 알림 (텔레그램 등)
-- [ ] 페이퍼 트레이딩 — 실거래 전 모의 운용으로 봇 안정성 검증
+### 봇 구조 (`bot/` 디렉토리)
+| 파일 | 역할 |
+|------|------|
+| `bot/config.py` | BotConfig 설정 (포트폴리오, 리스크, 텔레그램) |
+| `bot/exchange.py` | Binance ccxt 래퍼 — OHLCV(공개 클라이언트) + 주문/잔고(인증 클라이언트) 분리 |
+| `bot/risk_manager.py` | 일일 손실 5%, 낙폭 15%, 포지션 25% 한도 체크 |
+| `bot/notifier.py` | 텔레그램 알림 (진입/청산/일별 요약/에러) |
+| `bot/trader.py` | 메인 트레이더 — warmup, run_once, run_loop |
+| `run_bot.py` | CLI 엔트리포인트 |
+
+### 봇 실행 방법
+```bash
+# .env 파일 필요
+# BINANCE_API_KEY=your_key
+# BINANCE_API_SECRET=your_secret
+
+# 페이퍼 트레이딩 1회 실행 (신호 확인)
+python run_bot.py --paper --once
+
+# 페이퍼 트레이딩 연속 실행 (24/7)
+python run_bot.py --paper
+
+# 실거래 (주의! 실제 자금 사용)
+python run_bot.py
+```
+
+### 현재 포트폴리오 설정 (bot/config.py)
+- BTC/USDT : ensemble 4h : 40%
+- ETH/USDT : ensemble 4h : 35%
+- BNB/USDT : ensemble 4h : 25%
+
+### 완료된 항목
+- [x] `trader.py` 실거래 봇 완성 — 바이낸스 API 연동, 전략 신호 → 자동 주문
+- [x] 리스크 관리 레이어 — 일일 최대 손실 한도, 전략별 포지션 한도
+- [x] 운용 모니터링 — 텔레그램 알림 (포지션 현황, 일별 P&L, 이상 감지)
+- [x] 페이퍼 트레이딩 모드 — `--paper` 플래그로 실주문 없이 신호 확인
+- [x] `.env` 자동 로드 — API 키 안전 관리
+
+### 다음 단계
+- [ ] **페이퍼 트레이딩 2주+ 실행** — 신호가 예상대로 작동하는지 검증
+- [ ] **텔레그램 봇 토큰 설정** — `.env`에 TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID 추가
+- [ ] **실거래 전환** — 페이퍼 트레이딩 검증 후 `python run_bot.py` 실행
+
+---
+
+## 다음 탐구 방향 (미완료)
 
 ### 수익률 200% 경로 탐구
 - [ ] 레버리지 전략 백테스트 (2x, 3x) — MDD 허용 범위 내에서 최적 레버리지 탐색
