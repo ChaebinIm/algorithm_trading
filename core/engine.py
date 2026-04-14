@@ -39,7 +39,7 @@ def perf_summary(equity: pd.Series, returns: pd.Series, rf: float = 0.0) -> Dict
     - 누적수익률, 연환산 수익률/변동성, 샤프비율, MDD.
     - 분봉 수익률을 일 단위로 리샘플링(sum)해 연율화.
     """
-    ann_fac = 252  # 연 거래일 기준
+    ann_fac = 365  # 크립토는 365일 24시간 거래
     daily_ret = returns.resample("1D").sum(min_count=1)
     ann_ret = daily_ret.mean() * ann_fac
     ann_vol = daily_ret.std(ddof=1) * math.sqrt(ann_fac)

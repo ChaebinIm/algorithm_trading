@@ -78,6 +78,26 @@ class FixedUSDTSizer(Sizer):
         if signal > 0:  # buy
             qty = self.usdt / price
             return max(qty, self.min_qty)
-        elif signal < 0:  # sell → 전량 처분
+        elif signal < 0:  # sell -> 전량 처분
+            return -pos_qty
+        return 0.0
+
+
+class PercentSizer(Sizer):
+    """자본 비례 사이저.
+    현재 가용 현금의 일정 비율(percent)만큼을 1회 매매에 투입.
+    - 매수: 현금 * percent / 현재가 -> 수량
+    - 매도: 보유 수량 전량 매도
+    """
+    def __init__(self, percent: float = 0.15, min_qty: float = 0.0001):
+        self.percent = percent   # 0.15 = 15%
+        self.min_qty = min_qty
+
+    def size(self, price: float, cash: float, pos_qty: float, signal: int) -> float:
+        if signal > 0:  # buy
+            usdt_amount = cash * self.percent
+            qty = usdt_amount / price
+            return max(qty, self.min_qty)
+        elif signal < 0:  # sell -> 전량 처분
             return -pos_qty
         return 0.0

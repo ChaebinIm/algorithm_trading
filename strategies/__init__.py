@@ -53,6 +53,9 @@ def _build_registry() -> dict:
     from strategies.dual_momentum import DualMomentumStrategy
     from strategies.atr_breakout import ATRBreakoutStrategy
     from strategies.bollinger_squeeze import BollingerSqueezeStrategy
+    from strategies.enhanced_trend import EnhancedTrendStrategy
+    from strategies.enhanced_breakout import EnhancedBreakoutStrategy
+    from strategies.ensemble import EnsembleStrategy
 
     return {
         "ma_cross": MovingAverageCross,
@@ -60,6 +63,9 @@ def _build_registry() -> dict:
         "dual_momentum": DualMomentumStrategy,
         "atr_breakout": ATRBreakoutStrategy,
         "bollinger_squeeze": BollingerSqueezeStrategy,
+        "enhanced_trend": EnhancedTrendStrategy,
+        "enhanced_breakout": EnhancedBreakoutStrategy,
+        "ensemble": EnsembleStrategy,
     }
 
 
