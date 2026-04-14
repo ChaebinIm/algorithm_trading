@@ -60,14 +60,18 @@ TEST_STRATEGIES = [
 ]
 
 TEST_DATA = [
+    # Binance USDT (메인)
+    "data/ohlcv_full_BTCUSDT_4h.parquet",
+    "data/ohlcv_full_BTCUSDT_1d.parquet",
+    "data/ohlcv_full_ETHUSDT_4h.parquet",
+    "data/ohlcv_full_SOLUSDT_4h.parquet",
+    "data/ohlcv_full_SOLUSDT_1d.parquet",
+    "data/ohlcv_full_XRPUSDT_4h.parquet",
+    "data/ohlcv_full_XRPUSDT_1d.parquet",
+    "data/ohlcv_full_BNBUSDT_4h.parquet",
+    # Upbit KRW (기존)
     "data/ohlcv_full_BTCKRW_4h.parquet",
-    "data/ohlcv_full_ETHKRW_4h.parquet",
-    "data/ohlcv_full_ETHKRW_1h.parquet",
     "data/ohlcv_full_BTCKRW_1d.parquet",
-    "data/ohlcv_full_ETHKRW_1d.parquet",
-    "data/ohlcv_full_XRPKRW_1h.parquet",
-    "data/ohlcv_full_XRPKRW_4h.parquet",
-    "data/ohlcv_full_XRPKRW_1d.parquet",
 ]
 
 TRAIN_RATIO = 0.70   # 70% train, 30% test
@@ -203,9 +207,9 @@ def main():
     print("=" * 75)
 
     for data_path in [
+        "data/ohlcv_full_BTCUSDT_4h.parquet",
+        "data/ohlcv_full_SOLUSDT_4h.parquet",
         "data/ohlcv_full_BTCKRW_4h.parquet",
-        "data/ohlcv_full_ETHKRW_4h.parquet",
-        "data/ohlcv_full_ETHKRW_1h.parquet",
     ]:
         if not Path(data_path).exists():
             continue
