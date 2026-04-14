@@ -28,7 +28,7 @@ class BotConfig:
     # ── 거래소 설정 ─────────────────────────────────────────────────────
     api_key: str = "YOUR_API_KEY_HERE"
     api_secret: str = "YOUR_API_SECRET_HERE"
-    testnet: bool = True   # True = 테스트넷, False = 실거래
+    testnet: bool = False  # True = 테스트넷, False = 실거래 (페이퍼 모드에서는 주문 안 냄)
 
     # ── 포트폴리오 설정 ─────────────────────────────────────────────────
     # allocation_pct 합계는 반드시 1.0 이하여야 한다.
