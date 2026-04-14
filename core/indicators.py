@@ -74,3 +74,46 @@ def adx(df: pd.DataFrame, period: int = 14) -> pd.Series:
     dx = 100.0 * (plus_di - minus_di).abs() / (plus_di + minus_di + 1e-12)
     adx_val = dx.ewm(span=period, adjust=False).mean()
     return adx_val
+
+
+def bollinger_bands(
+    series: pd.Series, period: int = 20, num_std: float = 2.0,
+) -> tuple[pd.Series, pd.Series, pd.Series, pd.Series]:
+    """볼린저 밴드.
+
+    Returns:
+        (upper, middle, lower, bandwidth)
+        - upper: 상단 밴드 (middle + num_std * std)
+        - middle: 중심선 (SMA)
+        - lower: 하단 밴드 (middle - num_std * std)
+        - bandwidth: 밴드폭 비율 ((upper - lower) / middle). 스퀴즈 감지에 사용.
+    """
+    middle = series.rolling(period).mean()
+    std = series.rolling(period).std(ddof=1)
+    upper = middle + num_std * std
+    lower = middle - num_std * std
+    bandwidth = (upper - lower) / (middle + 1e-12)
+    return upper, middle, lower, bandwidth
+
+
+def donchian_channel(
+    df: pd.DataFrame, period: int = 20,
+) -> tuple[pd.Series, pd.Series]:
+    """돈키안 채널 (N기간 고가/저가).
+
+    Returns:
+        (upper, lower)
+        - upper: N기간 최고가
+        - lower: N기간 최저가
+    """
+    upper = df["high"].rolling(period).max()
+    lower = df["low"].rolling(period).min()
+    return upper, lower
+
+
+def momentum(series: pd.Series, period: int = 20) -> pd.Series:
+    """단순 모멘텀 — N기간 수익률.
+    momentum[t] = close[t] / close[t - period] - 1
+    양수: 상승 모멘텀, 음수: 하락 모멘텀.
+    """
+    return series / series.shift(period) - 1.0

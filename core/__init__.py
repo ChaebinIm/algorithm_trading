@@ -11,4 +11,7 @@ from core.models import (
     Sizer, FixedUSDTSizer,
 )
 from core.engine import BacktestEnv, run_backtest, compute_drawdown, perf_summary
-from core.indicators import sma, ema, rsi, atr, adx
+from core.indicators import (
+    sma, ema, rsi, atr, adx,
+    bollinger_bands, donchian_channel, momentum,
+)

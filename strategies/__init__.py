@@ -50,10 +50,16 @@ def _build_registry() -> dict:
     """등록된 전략들을 딕셔너리로 반환."""
     from strategies.ma_cross import MovingAverageCross
     from strategies.trend_following import TrendFollowingStrategy
+    from strategies.dual_momentum import DualMomentumStrategy
+    from strategies.atr_breakout import ATRBreakoutStrategy
+    from strategies.bollinger_squeeze import BollingerSqueezeStrategy
 
     return {
         "ma_cross": MovingAverageCross,
         "trend_following": TrendFollowingStrategy,
+        "dual_momentum": DualMomentumStrategy,
+        "atr_breakout": ATRBreakoutStrategy,
+        "bollinger_squeeze": BollingerSqueezeStrategy,
     }
 
 
