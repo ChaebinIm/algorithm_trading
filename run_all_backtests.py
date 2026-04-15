@@ -46,11 +46,11 @@ def find_data_files(timeframes=("1h", "4h", "1d")):
 
 
 # 백테스트 환경: 자본 비례 사이징 (20%)
-# 수수료는 업비트/빗썸 기준 0.05% = 5bps로 낮춤 (VIP 레벨 고려)
+# 수수료는 바이낸스 기본 0.1% = 10bps (보수적 가정)
 DEFAULT_ENV = BacktestEnv(
     cash=10_000,
     slippage=BasicSlippage(bps=5),
-    commission=FixedRateCommission(bps=5),   # 0.05% (KRW 거래소 기준)
+    commission=FixedRateCommission(bps=10),   # 0.1% (바이낸스 기본)
     sizer=PercentSizer(percent=0.20),         # 가용 현금의 20% 투입
 )
 

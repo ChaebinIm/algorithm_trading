@@ -78,9 +78,9 @@ from core import BacktestEnv, BasicSlippage, FixedRateCommission, PercentSizer
 
 ENV = BacktestEnv(
     cash=10_000,
-    slippage=BasicSlippage(bps=5),       # 슬리피지 0.05%
-    commission=FixedRateCommission(bps=5), # 수수료 0.05%
-    sizer=PercentSizer(percent=0.20),     # 자본의 20%씩
+    slippage=BasicSlippage(bps=5),        # 슬리피지 0.05%
+    commission=FixedRateCommission(bps=10), # 수수료 0.1% (바이낸스 기본, 보수적 가정)
+    sizer=PercentSizer(percent=0.20),      # 자본의 20%씩
 )
 ```
 
