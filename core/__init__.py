@@ -8,7 +8,7 @@ from core.types import Fill, TradeLog, BacktestReport
 from core.models import (
     SlippageModel, BasicSlippage,
     CommissionModel, FixedRateCommission,
-    Sizer, FixedUSDTSizer, PercentSizer,
+    Sizer, FixedUSDTSizer, PercentSizer, FuturesSizer,
 )
 from core.engine import BacktestEnv, run_backtest, compute_drawdown, perf_summary
 from core.indicators import (

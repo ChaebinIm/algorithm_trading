@@ -50,8 +50,13 @@ def _compute_trade_stats(trades: pd.DataFrame) -> Dict[str, float]:
     buys = trades[trades["side"] == "buy"].reset_index(drop=True)
     sells = trades[trades["side"] == "sell"].reset_index(drop=True)
 
-    n = min(len(buys), len(sells))
-    if n == 0:
+    # 롱 라운드트립: buy → sell
+    long_n = min(len(buys), len(sells))
+    # 숏 라운드트립: sell → buy (숏 진입은 sell 먼저, 청산은 buy)
+    # 단순화: 시간 순서대로 체결을 쌍으로 매칭
+    pnls = []
+
+    if long_n == 0:
         return {
             "win_rate": float("nan"),
             "profit_factor": float("nan"),
@@ -60,8 +65,7 @@ def _compute_trade_stats(trades: pd.DataFrame) -> Dict[str, float]:
             "total_roundtrips": 0,
         }
 
-    pnls = []
-    for i in range(n):
+    for i in range(long_n):
         buy_price = buys.iloc[i]["price"]
         sell_price = sells.iloc[i]["price"]
         buy_fee = buys.iloc[i]["fee"]
@@ -70,6 +74,7 @@ def _compute_trade_stats(trades: pd.DataFrame) -> Dict[str, float]:
         gross = (sell_price - buy_price) * qty
         net = gross - buy_fee - sell_fee
         pnls.append(net)
+    n = long_n
 
     pnls = np.array(pnls)
     wins = pnls[pnls > 0]
@@ -224,7 +229,8 @@ def run_backtest(
                     fee = env.commission.cost(notional)
                     cash += (notional - fee)
                     pos_qty -= qty
-                    if pos_qty <= 1e-12:
+                    # 부동소수점 오차 정리 (숏 포지션은 음수이므로 abs로 비교)
+                    if abs(pos_qty) <= 1e-12:
                         pos_qty = 0.0
                         entry_price = None
 

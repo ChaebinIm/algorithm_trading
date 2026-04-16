@@ -101,3 +101,51 @@ class PercentSizer(Sizer):
         elif signal < 0:  # sell -> 전량 처분
             return -pos_qty
         return 0.0
+
+
+class FuturesSizer(Sizer):
+    """선물 전용 사이저 — 롱/숏 양방향 지원.
+
+    총 자산(equity)의 일정 비율로 목표 포지션을 설정하고,
+    현재 포지션과의 차이(delta)만큼 주문을 낸다.
+
+    signal=+1 : 롱 목표  (현재 숏이면 청산 후 롱 진입)
+    signal=-1 : 숏 목표  (현재 롱이면 청산 후 숏 진입)
+    signal= 0 : 플랫 목표 (현재 포지션 전량 청산)
+
+    Returns
+    -------
+    delta : float
+        양수 → buy  /  음수 → sell
+    """
+    def __init__(self, percent: float = 0.20, min_qty: float = 0.001):
+        self.percent = percent
+        self.min_qty = min_qty
+
+    def size(self, price: float, cash: float, pos_qty: float, signal: int) -> float:
+        if price <= 0:
+            return 0.0
+
+        equity = cash + pos_qty * price
+        target_notional = equity * self.percent
+        target_qty = target_notional / price
+
+        if signal > 0:
+            # 이미 롱이면 유지 (피라미딩 방지)
+            if pos_qty > self.min_qty:
+                return 0.0
+            target = target_qty
+        elif signal < 0:
+            # 이미 숏이면 유지 (피라미딩 방지)
+            if pos_qty < -self.min_qty:
+                return 0.0
+            target = -target_qty
+        else:
+            # signal=0 → 청산
+            target = 0.0
+
+        delta = target - pos_qty
+
+        if abs(delta) < self.min_qty:
+            return 0.0
+        return delta
