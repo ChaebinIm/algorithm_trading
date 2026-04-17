@@ -59,6 +59,7 @@ def _build_registry() -> dict:
     from strategies.champion_v2 import ChampionV2Strategy
     from strategies.ensemble_short import EnsembleShortStrategy
     from strategies.futures_regime import FuturesRegimeStrategy
+    from strategies.reg_channel_strategy import RegChannelStrategy
 
     return {
         # 기존 전략
@@ -80,6 +81,7 @@ def _build_registry() -> dict:
         "champion_v2": ChampionV2Strategy,
         "ensemble_short": EnsembleShortStrategy,
         "futures_regime": FuturesRegimeStrategy,
+        "reg_channel": RegChannelStrategy,
     }
 
 

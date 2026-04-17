@@ -303,3 +303,64 @@ def williams_r(df: pd.DataFrame, period: int = 14) -> pd.Series:
     high_max = df["high"].rolling(period).max()
     low_min = df["low"].rolling(period).min()
     return -100.0 * (high_max - df["close"]) / (high_max - low_min + 1e-12)
+
+
+def reg_channel(
+    df: pd.DataFrame,
+    window: int = 100,
+) -> tuple[pd.Series, pd.Series, pd.Series]:
+    """선형 회귀 채널 (Linear Regression Channel).
+
+    매 바마다 직전 window개 봉의 종가로 선형 회귀선을 계산하고,
+    그 회귀선과 평행하되 window 내 고점/저점에 닿는 상·하단 채널을 반환.
+
+    구조:
+        center  : 회귀 중심선 (현재 바의 회귀 예측값)
+        upper   : 회귀선 + max(window 내 고점 편차) → 저항 채널
+        lower   : 회귀선 + min(window 내 저점 편차) → 지지 채널
+
+    Parameters
+    ----------
+    df     : OHLCV DataFrame (high, low, close 필요)
+    window : 회귀 계산 구간 (기본 100봉)
+
+    Returns
+    -------
+    (center, upper, lower) : 각각 pd.Series
+    """
+    n = len(df)
+    center_arr = np.full(n, np.nan)
+    upper_arr  = np.full(n, np.nan)
+    lower_arr  = np.full(n, np.nan)
+
+    close  = df["close"].values
+    high   = df["high"].values
+    low    = df["low"].values
+    x      = np.arange(window, dtype=float)
+
+    for i in range(window - 1, n):
+        y = close[i - window + 1 : i + 1]
+
+        # 선형 회귀: y = slope*x + intercept
+        slope, intercept = np.polyfit(x, y, 1)
+
+        # window 내 각 점의 회귀 예측값
+        reg_vals = slope * x + intercept
+
+        # 현재 바(window 마지막 점)의 회귀 예측값
+        cur_reg = reg_vals[-1]
+
+        # 고점/저점의 회귀선 대비 편차
+        high_devs = high[i - window + 1 : i + 1] - reg_vals
+        low_devs  = low[i - window + 1 : i + 1]  - reg_vals
+
+        center_arr[i] = cur_reg
+        upper_arr[i]  = cur_reg + float(np.max(high_devs))
+        lower_arr[i]  = cur_reg + float(np.min(low_devs))
+
+    idx = df.index
+    return (
+        pd.Series(center_arr, index=idx, name="reg_center"),
+        pd.Series(upper_arr,  index=idx, name="reg_upper"),
+        pd.Series(lower_arr,  index=idx, name="reg_lower"),
+    )

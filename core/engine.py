@@ -240,9 +240,21 @@ def run_backtest(
                 ))
 
         equity_end = cash + pos_qty * cur["close"]
+
+        # ── 강제청산 (자본 소진 시) ───────────────────────────────────
+        # 실제 거래소는 증거금 소진 시 강제청산.
+        # equity가 초기 자본의 5% 아래로 떨어지면 즉시 포지션을 닫고
+        # 남은 자산을 그 값으로 고정 (추가 손실 방지).
+        if equity_end <= env.cash * 0.05 and pos_qty != 0.0:
+            # 청산 이후 자산 = max(equity_end, 0) 으로 고정
+            equity_end = max(equity_end, 0.0)
+            cash = equity_end
+            pos_qty = 0.0
+            entry_price = None
+
         eq.append(equity_end)
         rets.append((equity_end / last_equity) - 1.0 if last_equity > 0 else 0.0)
-        last_equity = equity_end
+        last_equity = equity_end if equity_end > 0 else 1e-9
 
     equity_series = pd.Series(eq, index=df.index[:-1], name="equity")
     ret_series = pd.Series(rets, index=df.index[:-1], name="returns")
