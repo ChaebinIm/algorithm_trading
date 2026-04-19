@@ -86,31 +86,36 @@ ENV = BacktestEnv(
 
 ---
 
-## Walk-Forward 검증 결과 (2026-04-14 기준)
+## Walk-Forward 검증 결과 (2026-04-18 기준)
+
+### 현재 등록된 전략 (strategies/ 폴더)
+| 전략 파일 | 전략명 | 특징 |
+|-----------|--------|------|
+| momentum_pullback.py | momentum_pullback | 브레이크아웃 장대양봉 후 눌림목 진입 (1h/4h) |
+| mtf_pullback.py | mtf_pullback | 일봉 장대양봉 + 하위 TF 눌림목 (연구 중) |
+| jangdae_momentum.py | **jangdae_momentum** | 일봉 장대양봉 다음날 첫 양봉 진입 (★ 신규) |
 
 ### 검증 통과 전략 (OOS 양수, 실전 사용 권장)
 
 | 우선순위 | 전략 | 마켓 | OOS Sharpe | OOS 수익률 | 비고 |
 |---------|------|------|-----------|----------|------|
-| 1 | ensemble | BTC KRW 4h | 2.20 (롤링 2.36) | +91.1% | 최강. IS<OOS 과적합 없음 |
-| 2 | ensemble | BTC USDT 4h | 롤링 1.04 | +12.9% | 더 긴 역사로 검증 |
-| 3 | macd_volume | XRP USDT 1d | 1.46 | +58.2% | XRP 특화 |
-| 4 | ensemble | ETH USDT 4h | 1.18 | +25.0% | ETH 유효 마켓 |
-| 5 | supertrend | SOL USDT 4h | 롤링 1.78 | +10.0% | 롤링은 강하나 고정 OOS 약함 |
-| 6 | champion_v2 | XRP USDT 4h | 1.11 | +39.3% | |
-| 7 | champion_v2 | BTC KRW 1d | 1.51 | +44.9% | |
-| 8 | champion | XRP KRW 1d | 1.48 | +55.1% | |
+| ★NEW | **jangdae_momentum** | BTC USDT 1d | **1.29** | **+?%** | IS<OOS 과적합 없음. 일봉 스윙. mult=1.0+body≥0.3 |
+| - | momentum_pullback | BTC USDT 4h | 0.61 | +? | 거래 수 부족 (14건 IS) |
 
-### champion 전략의 특별한 특성 (BTC KRW 4h 롤링)
-- W1: IS Sharpe 0.54 → OOS Sharpe 2.32
-- W2: IS Sharpe 0.82 → OOS Sharpe 2.05
-- IS << OOS: 과거보다 미래가 더 좋음. 진짜 알파.
+### jangdae_momentum 전략 상세
+- **컨셉**: 일봉 장대양봉(body >= ATR × 1.0) 다음날 첫 양봉(body ≥ ATR × 0.3)에 진입
+- **타임프레임**: 일봉 (daily)
+- **파라미터**: daily_mult=1.0, min_body_atr=0.3, tp=6%, sl=3%, sma_period=200, max_bars=5, entry_window=5
+- **IS (2017-2022)**: Sharpe 0.47, 41거래, 승률 51%
+- **OOS (2023-2026)**: Sharpe 1.29, 30거래, 승률 53%
+- **Walk-Forward**: OOS 2020→3.51 / OOS 2022→0.00(SMA200 필터로 하락장 회피) / OOS 2023-24→1.79
+- **적합 마켓**: BTC USDT 1d (ETH는 OOS -1.23으로 실패)
+- **핵심**: SMA200 필터로 하락장 완전 회피, 강세장에서만 진입
 
-### 검증 실패 전략 (사용 금지)
-- SOL USDT 1d: IS 1.52~1.72 → OOS 전부 마이너스 (심각한 과적합)
-- adaptive_regime / ETH: OOS -5.1%
-- ensemble_short: 롱 전용 ensemble보다 성과 낮음
-- BTC USDT 1d: supertrend OOS 음수
+### 주요 발견 (2026-04-17)
+- **분봉/1h/4h 장대양봉 전략은 엣지 없음**: 엔진이 봉 종가로만 청산 → SL이 봉 내부에서 관통되면 의도보다 큰 손실. 1h 봉 내 2-3% 폭락 시 0.8% SL이 무력화됨.
+- **일봉이 해결책**: 일봉 종가 기준으로 SL이 작동하고, 장대양봉 패턴의 실제 엣지(다음날 상승 확률 73-83%)를 온전히 포착.
+- **직접 진입이 최적**: 눌림목 대기 없이 다음날 첫 양봉에 바로 진입해도 승률 동일.
 
 ---
 
