@@ -45,10 +45,12 @@ def _build_registry() -> dict:
     from strategies.momentum_pullback import MomentumPullbackStrategy
     from strategies.mtf_pullback import MTFPullbackStrategy
     from strategies.jangdae_momentum import JangdaeMomentumStrategy
+    from strategies.jangdae_eumbon_reversal import JangdaeEumbonReversalStrategy
     return {
         "momentum_pullback": MomentumPullbackStrategy,
         "mtf_pullback": MTFPullbackStrategy,
         "jangdae_momentum": JangdaeMomentumStrategy,
+        "jangdae_eumbon_reversal": JangdaeEumbonReversalStrategy,
     }
 
 

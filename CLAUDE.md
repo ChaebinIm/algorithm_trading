@@ -86,36 +86,53 @@ ENV = BacktestEnv(
 
 ---
 
-## Walk-Forward 검증 결과 (2026-04-18 기준)
+## Walk-Forward 검증 결과 (2026-04-23 기준)
 
 ### 현재 등록된 전략 (strategies/ 폴더)
 | 전략 파일 | 전략명 | 특징 |
 |-----------|--------|------|
 | momentum_pullback.py | momentum_pullback | 브레이크아웃 장대양봉 후 눌림목 진입 (1h/4h) |
 | mtf_pullback.py | mtf_pullback | 일봉 장대양봉 + 하위 TF 눌림목 (연구 중) |
-| jangdae_momentum.py | **jangdae_momentum** | 일봉 장대양봉 다음날 첫 양봉 진입 (★ 신규) |
+| jangdae_momentum.py | **jangdae_momentum** | 일봉 장대양봉 다음날 첫 양봉 진입 ★ |
+| jangdae_eumbon_reversal.py | **jangdae_eumbon_reversal** | 일봉 장대음봉 당일 즉시 반등 진입 ★ |
 
 ### 검증 통과 전략 (OOS 양수, 실전 사용 권장)
 
-| 우선순위 | 전략 | 마켓 | OOS Sharpe | OOS 수익률 | 비고 |
-|---------|------|------|-----------|----------|------|
-| ★NEW | **jangdae_momentum** | BTC USDT 1d | **1.29** | **+?%** | IS<OOS 과적합 없음. 일봉 스윙. mult=1.0+body≥0.3 |
-| - | momentum_pullback | BTC USDT 4h | 0.61 | +? | 거래 수 부족 (14건 IS) |
+| 우선순위 | 전략 | 마켓 | OOS Sharpe | 비고 |
+|---------|------|------|-----------|------|
+| ★ | **jangdae_momentum** | BTC USDT 1d | **1.29** | 상승장 특화. SMA200 위에서만 작동 |
+| ★ | **jangdae_eumbon_reversal** | BTC USDT 1d | **1.19** | 조정/하락장 특화. jangdae_momentum과 보완 관계 |
+| - | momentum_pullback | BTC USDT 4h | 0.61 | 거래 수 부족 |
 
 ### jangdae_momentum 전략 상세
 - **컨셉**: 일봉 장대양봉(body >= ATR × 1.0) 다음날 첫 양봉(body ≥ ATR × 0.3)에 진입
-- **타임프레임**: 일봉 (daily)
-- **파라미터**: daily_mult=1.0, min_body_atr=0.3, tp=6%, sl=3%, sma_period=200, max_bars=5, entry_window=5
+- **파라미터**: daily_mult=1.0, min_body_atr=0.3, tp=6%, sl=3%, sma_period=200, max_bars=5
 - **IS (2017-2022)**: Sharpe 0.47, 41거래, 승률 51%
 - **OOS (2023-2026)**: Sharpe 1.29, 30거래, 승률 53%
-- **Walk-Forward**: OOS 2020→3.51 / OOS 2022→0.00(SMA200 필터로 하락장 회피) / OOS 2023-24→1.79
-- **적합 마켓**: BTC USDT 1d (ETH는 OOS -1.23으로 실패)
 - **핵심**: SMA200 필터로 하락장 완전 회피, 강세장에서만 진입
 
-### 주요 발견 (2026-04-17)
-- **분봉/1h/4h 장대양봉 전략은 엣지 없음**: 엔진이 봉 종가로만 청산 → SL이 봉 내부에서 관통되면 의도보다 큰 손실. 1h 봉 내 2-3% 폭락 시 0.8% SL이 무력화됨.
-- **일봉이 해결책**: 일봉 종가 기준으로 SL이 작동하고, 장대양봉 패턴의 실제 엣지(다음날 상승 확률 73-83%)를 온전히 포착.
-- **직접 진입이 최적**: 눌림목 대기 없이 다음날 첫 양봉에 바로 진입해도 승률 동일.
+### jangdae_eumbon_reversal 전략 상세 (2026-04-23 신규)
+- **컨셉**: 일봉 장대음봉(ATR×1.0~2.0) 당일 종가 즉시 반등 진입
+- **파라미터**: min_mult=1.0, max_mult=2.0, drawdown_filter=-0.15, vol_filter=False, tp=8%, sl=3%, max_bars=7
+- **IS (2017-2022)**: Sharpe 0.14, 41거래, 승률 39%
+- **OOS (2023-2026)**: Sharpe 1.19, 18거래, 승률 67%, MDD -0.2%
+- **핵심**: jangdae_momentum과 반대 국면 작동 (조정/하락장), T0 종가 즉시 진입
+- **리서치 발견**: 양봉 기다릴수록 손해, 아래꼬리는 예측력 없음, SMA200 아래에서 오히려 반등 강함
+
+### 두 전략의 보완 관계
+| | jangdae_momentum | jangdae_eumbon_reversal |
+|--|-----------------|------------------------|
+| 진입 신호 | 장대양봉 다음날 | 장대음봉 당일 |
+| 최적 시장 | 상승추세(SMA200 위) | 조정/하락장(-15%+ 낙폭) |
+| OOS 승률 | 53% | 67% |
+| OOS MDD | -3.8% | -0.2% |
+
+### 주요 발견 (2026-04-23)
+- **T0 즉시 진입**: 음봉 이후 양봉 기다릴수록 성과 악화 (첫 양봉 진입가가 T0보다 +1.18% 높음)
+- **아래꼬리 미신 기각**: 아래꼬리 크기는 반등 예측력 없음 (오히려 역상관)
+- **깊은 조정이 핵심**: 고점 대비 -15%+ 낙폭 구간에서만 엣지 존재
+- **폭락봉(ATR×1.5+)은 금물**: 모멘텀 지속 패턴으로 즉각 반등 불리
+- **BNB가 반등 최강**: 5d 평균 +4.08%, 승률 62%
 
 ---
 
