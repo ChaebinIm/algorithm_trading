@@ -46,11 +46,13 @@ def _build_registry() -> dict:
     from strategies.mtf_pullback import MTFPullbackStrategy
     from strategies.jangdae_momentum import JangdaeMomentumStrategy
     from strategies.jangdae_eumbon_reversal import JangdaeEumbonReversalStrategy
+    from strategies.intermarket_momentum import IntermarketMomentumStrategy
     return {
         "momentum_pullback": MomentumPullbackStrategy,
         "mtf_pullback": MTFPullbackStrategy,
         "jangdae_momentum": JangdaeMomentumStrategy,
         "jangdae_eumbon_reversal": JangdaeEumbonReversalStrategy,
+        "intermarket_momentum": IntermarketMomentumStrategy,
     }
 
 
